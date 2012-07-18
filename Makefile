@@ -9,6 +9,7 @@ uglify:
 	@uglifyjs -v -o assets/application.min.js assets/application.js
 
 publish: sass uglify
+	@echo "change the path to application.js"
 
 .PHONY: sass watchsass uglify publish
 
