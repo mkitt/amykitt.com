@@ -1,25 +1,37 @@
 
-var BackgroundCarousel = function(el) {
+var Carousel = function(el) {
   this.el = $(el)
+  this.viewport = $(window)
   this.images = this.getImages()
   this.total_images = this.images.length
   this.index = 0
+  this.aspectRatio = 1000/650
   this.initialize()
 };
 
-BackgroundCarousel.prototype.initialize = function() {
+Carousel.prototype.initialize = function() {
+  this.viewport.on('resize', {self: this}, this.resize).trigger('resize')
   $(this.images[0]).addClass('in')
   this.next()
 };
 
-BackgroundCarousel.prototype.next = function() {
+Carousel.prototype.resize = function(e) {
+  var self = e.data.self
+  if ((self.viewport.width() / self.viewport.height()) < self.aspectRatio ) {
+    self.images.removeClass('by-width').addClass('by-height')
+  } else {
+    self.images.removeClass('by-height').addClass('by-width')
+  }
+};
+
+Carousel.prototype.next = function() {
   var self = this
   setTimeout(function() {
     self.swap()
   }, 8000)
 }
 
-BackgroundCarousel.prototype.swap = function() {
+Carousel.prototype.swap = function() {
   $(this.images[this.index]).removeClass('in')
   this.index += 1
   this.constrainIndex()
@@ -27,7 +39,7 @@ BackgroundCarousel.prototype.swap = function() {
   this.next()
 };
 
-BackgroundCarousel.prototype.constrainIndex = function() {
+Carousel.prototype.constrainIndex = function() {
   if (this.index >= this.total_images) {
     this.index = 0
   }
@@ -36,7 +48,7 @@ BackgroundCarousel.prototype.constrainIndex = function() {
   }
 };
 
-BackgroundCarousel.prototype.getImages = function() {
+Carousel.prototype.getImages = function() {
   var items = this.el.data('images').split(',')
   for (var i = 0, len = items.length; i < len; i += 1) {
     var img_name = items[i].replace(/^\s/, '')
@@ -47,6 +59,6 @@ BackgroundCarousel.prototype.getImages = function() {
 
 // Make some magic...
 (function() {
-  var bc = new BackgroundCarousel($('.backgrounds'))
+  var carousel = new Carousel($('.backgrounds'))
 }());
 

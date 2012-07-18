@@ -18,6 +18,7 @@
   left: 0
   right: 0
   top: 0
+  z-index: 2
 
 .header-panel
   +clearfixer
@@ -88,19 +89,15 @@
     color: $lavender
 
 .bg
-  min-height: 100%
-  min-width: 1000px
-  width: 100%
-  height: auto
   position: fixed
   top: 0
   left: 0
-  z-index: -1
-
-@media screen and (max-width: 1000px)
-  .bg
-    left: 50%
-    margin-left: -500px
+  z-index: 1
+  max-width: none
+  &.by-width
+    width: 100%
+  &.by-height
+    height: 100%
 
 
 @media screen and (max-width: 880px)
