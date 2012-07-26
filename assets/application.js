@@ -49,11 +49,15 @@ Carousel.prototype.constrainIndex = function() {
 };
 
 Carousel.prototype.getImages = function() {
+  var markup = ''
   var items = this.el.data('images').split(',')
+  items.sort(function() { return 0.5 - Math.random() })
+
   for (var i = 0, len = items.length; i < len; i += 1) {
     var img_name = items[i].replace(/^\s/, '')
-    this.el.append('<img class="bg fade" src="/assets/images/' + img_name +'" alt="' + img_name +'"/>')
+    markup += '<img class="bg fade" src="/assets/images/' + img_name +'" alt="' + img_name +'"/>'
   }
+  this.el.append(markup)
   return $('.bg', this.el)
 };
 
