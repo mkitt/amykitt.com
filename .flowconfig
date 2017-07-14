@@ -1,0 +1,10 @@
+[ignore]
+.*/node_modules/fbjs/.*
+.*/node_modules/babel-plugin-transform-react-remove-prop-types/src/index.js
+.*/node_modules/mitt/src/index.js
+
+[include]
+
+[libs]
+
+[options]

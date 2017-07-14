@@ -1,0 +1,8 @@
+.DS_Store
+.env
+.next
+*.log
+*.map
+build
+coverage
+node_modules

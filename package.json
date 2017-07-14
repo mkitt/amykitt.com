@@ -1,0 +1,66 @@
+{
+  "name": "amykitt",
+  "description": "Web sites for Amy Kitt",
+  "homepage": "https://amykitt.com/",
+  "version": "0.0.1",
+  "license": "MIT",
+  "engines": {
+    "node": "8.1.2",
+    "npm": "5.0.3"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "prebuild": "node ./content.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js -p $PORT",
+    "flow": "flow",
+    "lint": "eslint ./",
+    "test": "jest",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "body-parser": "1.17.2",
+    "classnames": "2.2.5",
+    "cors": "2.8.4",
+    "dotenv": "4.0.0",
+    "express": "4.15.3",
+    "front-matter": "2.1.2",
+    "glamor": "3.0.0-3",
+    "glamor-server": "3.0.0-3",
+    "isomorphic-fetch": "2.2.1",
+    "next": "2.4.7",
+    "path-match": "1.2.4",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "react-markdown": "2.5.0",
+    "reselect": "3.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-flow": "6.23.0",
+    "enzyme": "2.9.1",
+    "eslint": "3.19.0",
+    "eslint-config-mkitt": "2.0.0",
+    "flow-bin": "0.50.0",
+    "jest": "20.0.4",
+    "react-addons-test-utils": "15.6.0",
+    "react-test-renderer": "15.6.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "Firefox ESR"
+  ],
+  "babel": {
+    "presets": [
+      "env",
+      "flow",
+      "next/babel"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "mkitt"
+  }
+}

@@ -1,0 +1,12 @@
+// @flow
+
+type UrlProps = {
+  pathname: string,
+  query?: {
+    id: string,
+  },
+}
+
+export type PageProps = {
+  url: UrlProps,
+}
