@@ -6,24 +6,29 @@ import NavbarLink from './NavbarLink'
 import NavbarLogo from './NavbarLogo'
 import NavbarTitle from './NavbarTitle'
 import View from './View'
-import Wrapper from './Wrapper'
 
 const navStyle = css({
   position: 'sticky',
   top: 0,
+  zIndex: 5,
   height: 160,
-  paddingRight: 80,
-  paddingLeft: 80,
   color: '#7c7c7c',
   backgroundColor: '#f6f6f6',
 })
 
 const wrapperStyle = css({
+  position: 'relative',
   display: 'flex',
   flexFlow: 'row wrap',
   alignItems: 'center',
   justifyContent: 'center',
+  maxWidth: 1440,
   height: '100%',
+  marginRight: 'auto',
+  marginLeft: 'auto',
+  paddingRight: 80,
+  paddingLeft: 80,
+  outline: '1px dotted magenta',
 })
 
 const contentStyle = css({
@@ -40,7 +45,7 @@ type Props = {
 
 export default (props: Props) => (
   <nav className={navStyle}>
-    <Wrapper className={wrapperStyle}>
+    <View className={wrapperStyle}>
       <NavbarLogo href="/" isActive={props.pathname === '/'} />
       <View className={contentStyle}>
         <NavbarTitle />
@@ -54,6 +59,6 @@ export default (props: Props) => (
           </NavbarLink>
         </View>
       </View>
-    </Wrapper>
+    </View>
   </nav>
 )

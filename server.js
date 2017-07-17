@@ -1,15 +1,15 @@
 const express = require('express')
 const cors = require('cors')
-const { parse } = require('url')
+// const { parse } = require('url')
 const next = require('next')
 const bodyParser = require('body-parser')
-const pathMatch = require('path-match')
+// const pathMatch = require('path-match')
 
 const port = process.env.PORT || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
-const route = pathMatch()
+// const route = pathMatch()
 // const matchProjects = route('/projects/:id')
 
 app.prepare()
@@ -34,4 +34,3 @@ app.prepare()
     console.log(`> Ready on http://localhost:${port}`) // eslint-disable-line
   })
 })
-

@@ -1,12 +1,26 @@
 // @flow
+export type About = {
+  body: string,
+  id: string,
+  title: string,
+}
 
-type UrlProps = {
+export type Home = {
+  body: string,
+  id: string,
+  title: string,
+}
+
+export type Project = {
+  body: string,
+  id: string,
+  tile: string,
+  title: string,
+}
+
+export type Url = {
   pathname: string,
   query?: {
     id: string,
   },
-}
-
-export type PageProps = {
-  url: UrlProps,
 }

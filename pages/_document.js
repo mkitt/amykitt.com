@@ -13,9 +13,31 @@ const globalStyles = `
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
   body { position: relative; margin: 0; overflow-x: hidden; background-color: #fff; }
+  body.isModalActive { overflow: hidden; }
   ::selection { color: #fff; text-shadow: none; background: #000; }
   h1, h2, h3, h4, h5, h6 { margin: 0; line-height: 1.25; }
   a { color: inherit; background-color: transparent; -webkit-text-decoration-skip: objects; }
+  button {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    vertical-align: middle;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    cursor: pointer;
+    -webkit-appearance: button;
+  }
+  input::-moz-focus-inner,
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
 `.replace(/\n/g, '')
 
 export default class MyDocument extends Document {
@@ -37,7 +59,7 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
           <style>{globalStyles}</style>
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>

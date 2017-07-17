@@ -3,6 +3,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { rehydrate } from 'glamor'
+import FeatureDetection from './FeatureDetection'
 import Navbar from './Navbar'
 
 // Adds server generated styles to glamor cache.
@@ -29,6 +30,7 @@ const Layout = (props: Props) => (
       <link href="/static/favicon.ico" rel="shortcut icon" type="image/x-icon" />
       <link href="/static/favicon.svg" color="#000" rel="mask-icon" />
     </Head>
+    <FeatureDetection />
     <Navbar pathname={props.pathname} />
     <main>
       {props.children}

@@ -12,12 +12,23 @@ export const AKIcon = ({ ...props }: any) => (
   </Svg>
 )
 
+export const XIcon = ({ ...props }: any) => (
+  <Svg width={24} height={24} {...props} viewBox="0 0 24 24">
+    <g stroke="currentColor">
+      <line x1="2" y1="2" x2="22" y2="22" />
+      <line x1="22" y1="2" x2="2" y2="22" />
+    </g>
+  </Svg>
+)
+
 type Props = {
   kind: string,
 }
 
 export default ({ kind, ...props }: Props) => {
   switch (kind) {
+    case 'XIcon':
+      return <XIcon {...props} />
     case 'AKIcon':
     default:
       return <AKIcon {...props} />
