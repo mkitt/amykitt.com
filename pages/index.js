@@ -3,6 +3,7 @@ import 'isomorphic-fetch'
 import React from 'react'
 import { createSelector } from 'reselect'
 import { indexPath } from '../networking/api'
+import AboutView from '../components/AboutView'
 import Layout from '../components/Layout'
 import Section from '../components/Section'
 import Projects from '../components/Projects'
@@ -61,19 +62,20 @@ export default class extends React.PureComponent {
   }
 
   render() {
-    const { projects, url } = this.props
+    const { about, projects, url } = this.props
     const { project } = this.state
     return (
       <Layout pathname={url.pathname} title="Hello.">
-        <Section>
-          <h2>Projects</h2>
+        <Section id="work">
           <Projects
             onClick={this.onClickProject}
             projects={projects}
           />
         </Section>
-        <Section>
-          <h2>About</h2>
+        <Section id="about">
+          <AboutView
+            about={about}
+          />
         </Section>
         <ProjectModal
           onCloseModal={this.onCloseModal}

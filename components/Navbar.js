@@ -1,11 +1,16 @@
 // @flow
 import React from 'react'
 import css from '../styles/css'
+import { getPageY, scrollViewport } from '../lib/viewport'
 import NavbarBullet from './NavbarBullet'
 import NavbarLink from './NavbarLink'
 import NavbarLogo from './NavbarLogo'
 import NavbarTitle from './NavbarTitle'
 import View from './View'
+
+type Props = {
+  pathname: string,
+}
 
 const navStyle = css({
   position: 'sticky',
@@ -39,26 +44,54 @@ const contentStyle = css({
   justifyContent: 'center',
 })
 
-type Props = {
-  pathname: string,
+const onClickToSection = (e: any) => {
+  e.preventDefault()
+  const href = e.target.getAttribute('href')
+  const selector = href.replace('#', '')
+  if (selector === '/') {
+    scrollViewport(0)
+    return
+  }
+  const element = document.getElementById(selector)
+  const top = element && element.getBoundingClientRect().top + getPageY()
+  scrollViewport(top || 0)
 }
 
-export default (props: Props) => (
-  <nav className={navStyle}>
-    <View className={wrapperStyle}>
-      <NavbarLogo href="/" isActive={props.pathname === '/'} />
-      <View className={contentStyle}>
-        <NavbarTitle />
-        <View>
-          <NavbarLink href="/" isActive={props.pathname === '/'} >
-            Work
-          </NavbarLink>
-          <NavbarBullet />
-          <NavbarLink href="/#about" isActive={props.pathname === '/#about'} >
-            About
-          </NavbarLink>
+export default class extends React.PureComponent {
+  props: Props
+
+  render() {
+    const { pathname } = this.props
+    return (
+      <nav className={navStyle}>
+        <View className={wrapperStyle}>
+          <NavbarLogo
+            href="/"
+            isActive={pathname === '/'}
+            onClick={onClickToSection}
+          />
+          <View className={contentStyle}>
+            <NavbarTitle />
+            <View>
+              <NavbarLink
+                href="/"
+                isActive={pathname === '/'}
+                onClick={onClickToSection}
+              >
+                Work
+              </NavbarLink>
+              <NavbarBullet />
+              <NavbarLink
+                href="#about"
+                isActive={pathname === '#about'}
+                onClick={onClickToSection}
+              >
+                About
+              </NavbarLink>
+            </View>
+          </View>
         </View>
-      </View>
-    </View>
-  </nav>
-)
+      </nav>
+    )
+  }
+}

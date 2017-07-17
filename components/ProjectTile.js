@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import Button from './Button'
+import TileImage from './TileImage'
 import type { Project } from '../types/app.js.flow'
 
 type Props = {
@@ -13,6 +14,11 @@ export default ({ project, ...props }: Props) => (
     data-id={project.id}
     {...props}
   >
-    <img alt={project.title} src={project.tile} width={100} />
+    <TileImage
+      src={project.tile}
+      allowableWidth={250}
+      naturalWidth={Number(project.tileWidth)}
+      naturalHeight={Number(project.tileHeight)}
+    />
   </Button>
 )

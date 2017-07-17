@@ -1,6 +1,8 @@
 ---
 title: Aspen Brand Campaign
-tile: https://d194i88zucrucp.cloudfront.net/work/Aspen_X-thumb-sm.jpg
+tile: https://d194i88zucrucp.cloudfront.net/work/Aspen_X-thumb-xs.jpg
+tileWidth: 600
+tileHeight: 450
 ---
 
 # Aspen Brand Campaign

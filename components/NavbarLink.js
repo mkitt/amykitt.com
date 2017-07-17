@@ -1,7 +1,6 @@
 // @flow
 import React from 'react'
 import css, { hover } from '../styles/css'
-import Link from './Link'
 
 type Props = {
   children: React.Element<*>,
@@ -28,11 +27,12 @@ const activeStyle = css(
   { borderBottomColor: 'currentColor' },
 )
 
-export default ({ href, isActive, ...props }: Props) => (
-  <Link
+export default ({ children, href, isActive, ...props }: Props) => (
+  <a
     className={`${style} ${isActive ? activeStyle : ''}`}
-    as={href.replace('?id=', '/')}
     href={href}
     {...props}
-  />
+  >
+    {children}
+  </a>
 )

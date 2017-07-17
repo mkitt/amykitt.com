@@ -35,7 +35,7 @@ const style = css(
 
 export default ({ source, ...props }: Props) => (
   <Markdown
-    className={style}
+    className={`${style}`}
     source={source}
     {...props}
   />

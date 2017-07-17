@@ -1,6 +1,8 @@
 ---
 title: Audi R8
-tile: https://d194i88zucrucp.cloudfront.net/work/AudiR8-thumb-sm.jpg
+tile: https://d194i88zucrucp.cloudfront.net/work/AudiR8-thumb-xs.jpg
+tileWidth: 600
+tileHeight: 548
 ---
 
 # Audi R8 Coffee Table Book
