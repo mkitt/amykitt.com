@@ -8,7 +8,8 @@ import Layout from '../components/Layout'
 import Section from '../components/Section'
 import Projects from '../components/Projects'
 import ProjectModal from '../components/ProjectModal'
-import type { About, Home, Project, Url } from '../types/app.js.flow'
+import { addResizeObserver, removeResizeObserver } from '../lib/viewport'
+import type { About, Home, Project, ResizeProps, Url } from '../types/app.js.flow'
 
 export type Props = {
   about: About,
@@ -19,6 +20,10 @@ export type Props = {
 
 type State = {
   project: Project | null | void,
+  viewportColumnCount: number,
+  viewportHeight: number,
+  viewportSize: string,
+  viewportWidth: number,
 }
 
 const selectId = (props, state, vo) => vo.id
@@ -30,17 +35,40 @@ const selectProject = createSelector(
   ),
 )
 
+const selectViewportColumnCount = state => state.viewportColumnCount || 2
+const selectViewportWidth = state => state.viewportWidth || 0
+const selectAllowableGridWidth = createSelector(
+  [selectViewportColumnCount, selectViewportWidth], (columnCount, viewportWidth) => {
+    const columnPadding = 10
+    const vw = viewportWidth - 160 // site padding :(
+    const width = Math.min(vw, 1310)
+    return Math.round((width - ((columnCount + 1) * columnPadding)) / columnCount)
+  },
+)
+
 export default class extends React.PureComponent {
   props: Props
   // eslint-disable-next-line
   state: State = {
     project: null,
+    viewportColumnCount: 2,
+    viewportHeight: 568,
+    viewportSize: 'xsmall',
+    viewportWidth: 320,
   }
 
   static async getInitialProps() {
     const res = await fetch(indexPath())
     const json = await res.json()
     return { ...json }
+  }
+
+  componentDidMount() {
+    addResizeObserver(this)
+  }
+
+  componentWillUnmount() {
+    removeResizeObserver(this)
   }
 
   onClickProject = ({ currentTarget }: any) => {
@@ -54,6 +82,11 @@ export default class extends React.PureComponent {
     this.setProject()
   }
 
+  onResize = (props: ResizeProps) => {
+    console.log('resizing', props)
+    this.setState({ ...props })
+  }
+
   setProject = (id: string | null | void) => {
     const project = selectProject(this.props, this.state, { id })
     if (project !== this.state.project) {
@@ -63,11 +96,15 @@ export default class extends React.PureComponent {
 
   render() {
     const { about, projects, url } = this.props
-    const { project } = this.state
+    const { project, viewportColumnCount } = this.state
+    const allowableGridWidth = selectAllowableGridWidth(this.state)
+    console.log('rendering index.js', allowableGridWidth, viewportColumnCount)
     return (
       <Layout pathname={url.pathname} title="Hello.">
         <Section id="work">
           <Projects
+            allowableWidth={allowableGridWidth}
+            columnCount={viewportColumnCount}
             onClick={this.onClickProject}
             projects={projects}
           />

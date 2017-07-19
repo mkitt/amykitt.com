@@ -28,6 +28,7 @@
     "glamor": "3.0.0-3",
     "glamor-server": "3.0.0-3",
     "isomorphic-fetch": "2.2.1",
+    "lodash": "4.17.4",
     "next": "2.4.7",
     "path-match": "1.2.4",
     "react": "15.6.1",

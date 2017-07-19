@@ -14,6 +14,27 @@ const globalStyles = `
   }
   body { position: relative; margin: 0; overflow-x: hidden; background-color: #fff; }
   body.isModalActive { overflow: hidden; }
+  body::after {
+    position: absolute;
+    z-index: 2;
+    display: none !important;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    content: "xsmall";
+  }
+  @media (min-width: 25em) {
+    body::after { z-index: 2; content: "small"; }
+  }
+  @media (min-width: 47.5em) {
+    body::after { z-index: 3; content: "medium"; }
+  }
+  @media (min-width: 63.75em) {
+    body::after { z-index: 4; content: "large"; }
+  }
+  @media (min-width: 80.625em) {
+    body::after { z-index: 5; content: "xlarge"; }
+  }
   ::selection { color: #fff; text-shadow: none; background: #000; }
   h1, h2, h3, h4, h5, h6 { margin: 0; line-height: 1.25; }
   a { color: inherit; background-color: transparent; -webkit-text-decoration-skip: objects; }

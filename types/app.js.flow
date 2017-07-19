@@ -1,4 +1,15 @@
 // @flow
+export type ResizeProps = {
+  viewportColumnCount: number,
+  viewportHeight: number,
+  viewportSize: string,
+  viewportWidth: number,
+}
+
+export type ScrollProps = {
+  scrollY: number,
+}
+
 export type About = {
   body: string,
   id: string,
