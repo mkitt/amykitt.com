@@ -58,10 +58,10 @@ export default class extends React.PureComponent {
   // eslint-disable-next-line
   state: State = {
     project: null,
-    viewportColumnCount: 2,
-    viewportHeight: 568,
-    viewportSize: 'xsmall',
-    viewportWidth: 320,
+    viewportColumnCount: 5,
+    viewportHeight: 768,
+    viewportSize: 'xlarge',
+    viewportWidth: 1440,
   }
 
   static async getInitialProps() {

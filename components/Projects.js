@@ -63,7 +63,7 @@ export default class extends React.PureComponent {
               <ProjectTile
                 allowableWidth={allowableWidth}
                 onClick={onClick}
-                key={`Project_${project.title}`}
+                key={`Project_${project.id}`}
                 project={project}
               />
             ))}
