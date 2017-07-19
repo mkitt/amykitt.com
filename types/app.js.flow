@@ -19,6 +19,7 @@ export type About = {
 export type Home = {
   body: string,
   id: string,
+  tiles: Array<string>,
   title: string,
 }
 

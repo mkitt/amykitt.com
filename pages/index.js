@@ -28,10 +28,17 @@ type State = {
 
 const selectId = (props, state, vo) => vo.id
 const selectProjects = props => props.projects
+const selectHomeTiles = props => props.home.tiles
 
 const selectProject = createSelector(
   [selectId, selectProjects], (id, projects) => (
     projects.find(project => project.id === id)
+  ),
+)
+
+const selectWorkProjects = createSelector(
+  [selectProjects, selectHomeTiles], (projects, tiles) => (
+    tiles.map(id => projects.find(project => project.id === id))
   ),
 )
 
@@ -83,7 +90,6 @@ export default class extends React.PureComponent {
   }
 
   onResize = (props: ResizeProps) => {
-    console.log('resizing', props)
     this.setState({ ...props })
   }
 
@@ -95,10 +101,10 @@ export default class extends React.PureComponent {
   }
 
   render() {
-    const { about, projects, url } = this.props
+    const { about, url } = this.props
     const { project, viewportColumnCount } = this.state
     const allowableGridWidth = selectAllowableGridWidth(this.state)
-    console.log('rendering index.js', allowableGridWidth, viewportColumnCount)
+    const works = selectWorkProjects(this.props)
     return (
       <Layout pathname={url.pathname} title="Hello.">
         <Section id="work">
@@ -106,7 +112,7 @@ export default class extends React.PureComponent {
             allowableWidth={allowableGridWidth}
             columnCount={viewportColumnCount}
             onClick={this.onClickProject}
-            projects={projects}
+            projects={works}
           />
         </Section>
         <Section id="about">
