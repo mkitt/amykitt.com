@@ -11,6 +11,7 @@ type Props = {
 
 const style = css({
   paddingTop: 20,
+  paddingBottom: 20,
 })
 
 export default ({ about, ...props }: Props) => (

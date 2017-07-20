@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import Markdown from 'react-markdown'
-import css, { select } from '../styles/css'
+import css, { media3, select } from '../styles/css'
 
 type Props = {
   source: string,
@@ -33,22 +33,26 @@ const style = css(
     fontSize: 12,
     marginBottom: 2,
   }),
-  select('& img[alt="Amy Kitt"]', {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: 240,
-    height: 240,
-    fontSize: 12,
-  }),
   select('& ul', {
     margin: 0,
     padding: 0,
     listStyle: 'none',
   }),
-  select('#about &', {
-    paddingLeft: 260,
+  select('& img[alt="Amy Kitt"]', {
+    width: 120,
+    height: 120,
+    fontSize: 12,
   }),
+  media3(select('& img[alt="Amy Kitt"]', {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: 240,
+    height: 240,
+  })),
+  media3(select('#about &', {
+    paddingLeft: 260,
+  })),
   select('#about & h1', {
     fontSize: 18,
   }),

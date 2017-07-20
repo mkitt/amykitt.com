@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import css from '../styles/css'
+import css, { media3 } from '../styles/css'
 import Dismiss from './Dismiss'
 import Markdown from './Markdown'
 import View from './View'
@@ -34,19 +34,26 @@ const activeStyle = css({
   backgroundColor: 'rgba(124, 124, 129, 0.5)',
 })
 
-const markdownStyle = css({
-  position: 'relative',
-  maxWidth: 1290,
-  minHeight: 'calc(100vh - 160px)',
-  paddingTop: 15,
-  paddingRight: 60,
-  paddingBottom: 60,
-  paddingLeft: 60,
-  marginTop: 160,
-  marginRight: 'auto',
-  marginLeft: 'auto',
-  backgroundColor: '#fff',
-})
+const markdownStyle = css(
+  {
+    position: 'relative',
+    maxWidth: 1290,
+    minHeight: 'calc(100vh - 160px)',
+    paddingTop: 15,
+    paddingRight: 20,
+    paddingBottom: 20,
+    paddingLeft: 20,
+    marginTop: 160,
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    backgroundColor: '#fff',
+  },
+  media3({
+    paddingRight: 80,
+    paddingBottom: 80,
+    paddingLeft: 80,
+  }),
+)
 
 let modalElement = null
 

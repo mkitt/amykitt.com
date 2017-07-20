@@ -47,7 +47,7 @@ const selectViewportWidth = state => state.viewportWidth || 0
 const selectAllowableGridWidth = createSelector(
   [selectViewportColumnCount, selectViewportWidth], (columnCount, viewportWidth) => {
     const columnPadding = 10
-    const vw = viewportWidth - 160 // site padding :(
+    const vw = viewportWidth - (columnCount < 3 ? 40 : 160) // site padding :(
     const width = Math.min(vw, 1310)
     return Math.round((width - ((columnCount + 1) * columnPadding)) / columnCount)
   },

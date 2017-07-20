@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { createSelector } from 'reselect'
-import css from '../styles/css'
+import css, { media3 } from '../styles/css'
 import {
   addResizeObserver,
   addScrollObserver,
@@ -23,6 +23,7 @@ type Props = {
 
 type State = {
   isAboutActive: boolean,
+  viewportColumnCount: number,
   viewportHeight: number,
 }
 
@@ -35,20 +36,26 @@ const navStyle = css({
   backgroundColor: '#f6f6f6',
 })
 
-const wrapperStyle = css({
-  position: 'relative',
-  display: 'flex',
-  flexFlow: 'row wrap',
-  alignItems: 'center',
-  justifyContent: 'center',
-  maxWidth: 1440,
-  height: '100%',
-  marginRight: 'auto',
-  marginLeft: 'auto',
-  paddingRight: 80,
-  paddingLeft: 80,
-  outline: '1px dotted magenta',
-})
+const wrapperStyle = css(
+  {
+    position: 'relative',
+    display: 'flex',
+    flexFlow: 'row wrap',
+    alignItems: 'center',
+    justifyContent: 'center',
+    maxWidth: 1440,
+    height: '100%',
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    paddingRight: 20,
+    paddingLeft: 20,
+    outline: '1px dotted magenta',
+  },
+  media3({
+    paddingRight: 80,
+    paddingLeft: 80,
+  }),
+)
 
 const contentStyle = css({
   flex: 2,
@@ -63,7 +70,7 @@ const selectViewportHeight = state => state.viewportHeight || 0
 const selectAboutY = createSelector(
   [selectViewportHeight], (height) => {
     const element = document.getElementById('about')
-    return element && height ? element.offsetTop - 160 : NaN
+    return element && height ? (element.offsetTop - 160) : NaN
   },
 )
 
@@ -76,7 +83,7 @@ const onClickToSection = (e: any) => {
     return
   }
   const element = document.getElementById(selector)
-  const top = element && element.getBoundingClientRect().top + getPageY()
+  const top = element && (element.getBoundingClientRect().top + getPageY()) - 160
   scrollViewport(top || 0)
 }
 
@@ -84,6 +91,7 @@ export default class extends React.PureComponent {
   props: Props
   state: State = {
     isAboutActive: false,
+    viewportColumnCount: 5,
     viewportHeight: 768,
   }
 
@@ -97,8 +105,8 @@ export default class extends React.PureComponent {
     removeScrollObserver(this)
   }
 
-  onResize = ({ viewportHeight }: ResizeProps) => {
-    this.setState({ viewportHeight })
+  onResize = ({ viewportColumnCount, viewportHeight }: ResizeProps) => {
+    this.setState({ viewportColumnCount, viewportHeight })
   }
 
   onScroll = (props: ScrollProps) => {
@@ -110,15 +118,17 @@ export default class extends React.PureComponent {
   }
 
   render() {
-    const { isAboutActive } = this.state
+    const { isAboutActive, viewportColumnCount } = this.state
     return (
       <nav className={navStyle}>
         <View className={wrapperStyle}>
-          <NavbarLogo
-            href="/"
-            isActive={!isAboutActive}
-            onClick={onClickToSection}
-          />
+          { viewportColumnCount > 2 &&
+            <NavbarLogo
+              href="/"
+              isActive={!isAboutActive}
+              onClick={onClickToSection}
+            />
+          }
           <View className={contentStyle}>
             <NavbarTitle />
             <View>
