@@ -1,12 +1,12 @@
 ---
-title: Audi Model Year Brochure System 
-tile: https://d194i88zucrucp.cloudfront.net/work/IG_brochure-thumb-xs.jpg
+title: Audi Printed Matter
+tile: https://d194i88zucrucp.cloudfront.net/work/Audi_Covers1-thumb-xs.jpg
 tileWidth: 600
-tileHeight: 450
+tileHeight: 675
 ---
 
-# Audi Model Year Brochure System
-### Subtitle
+# Audi
+### Printed Matter
 ![Audi Cover](https://d194i88zucrucp.cloudfront.net/work/Audi_Covers1-lg.jpg)
 ![Audi TT Cover](https://d194i88zucrucp.cloudfront.net/work/Audi_TTcover-lg.jpg)
 ![Audi TT Spread 1](https://d194i88zucrucp.cloudfront.net/work/Audi_TTspread1-lg.jpg)

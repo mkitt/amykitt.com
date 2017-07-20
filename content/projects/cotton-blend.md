@@ -1,11 +1,21 @@
 ---
-title: Cotton Blend Identity & T-Shirt Art Show
-tile: https://d194i88zucrucp.cloudfront.net/work/IG_brochure-thumb-xs.jpg
+title: Cotton Blend A T-Shirt Art Show
+tile: https://d194i88zucrucp.cloudfront.net/work/CottonBlend1-thumb-xs.jpg
 tileWidth: 600
-tileHeight: 450
+tileHeight: 548
 ---
 
-# Cotton Blend Identity & T-Shirt Art Show
-### Subtitle
+# Cotton Blend
+### A T-shirt Art Show 
 ![Cotton Blend 1](https://d194i88zucrucp.cloudfront.net/work/CottonBlend1-lg.jpg)
 ![Cotton Blend 2](https://d194i88zucrucp.cloudfront.net/work/CottonBlend2-lg.jpg)
+![Cotton Blend 3](https://d194i88zucrucp.cloudfront.net/work/CottonBlend3-lg.jpg)
+![Cotton Blend 4](https://d194i88zucrucp.cloudfront.net/work/CottonBlend4-lg.jpg)
+![Cotton Blend 5](https://d194i88zucrucp.cloudfront.net/work/CottonBlend5-lg.jpg)
+![Cotton Blend 6](https://d194i88zucrucp.cloudfront.net/work/CottonBlend6-lg.jpg)
+![Cotton Blend 7](https://d194i88zucrucp.cloudfront.net/work/CottonBlend7-lg.jpg)
+![Cotton Blend 8](https://d194i88zucrucp.cloudfront.net/work/CottonBlend8-lg.jpg)
+![Cotton Blend 9](https://d194i88zucrucp.cloudfront.net/work/CottonBlend9-lg.jpg)
+![Cotton Blend 10](https://d194i88zucrucp.cloudfront.net/work/CottonBlend10-lg.jpg)
+
+Cotton Blend is a limited edition t-shirt art show. Proceeds from the show are donated to DAVA.org, a non-profit in Denver, CO that provides after school and summer art classes and mentorships for kids, most of whom no longer have art in their schools. The show has currently run 2 years in a row raising over $5k for the organization. 

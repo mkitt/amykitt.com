@@ -1,10 +1,13 @@
 ---
-title: Pressery Juice Company
-tile: https://d194i88zucrucp.cloudfront.net/work/IG_brochure-thumb-xs.jpg
+title: Pressery Package Design
+tile: https://d194i88zucrucp.cloudfront.net/work/Pressery-thumb-xs.jpg
 tileWidth: 600
-tileHeight: 450
+tileHeight: 975
 ---
 
-# Pressery Juice Company
-### Subtitle
-![Pressery](https://d194i88zucrucp.cloudfront.net/work/Pressery_WFJuiceBar-lg.jpg)
+# Pressery
+### Packaging Design
+![Pressery Juice Bar](https://d194i88zucrucp.cloudfront.net/work/Pressery_WFJuiceBar-lg.jpg)
+![Pressery Soup](https://d194i88zucrucp.cloudfront.net/work/Pressery_Soup-lg.jpg)
+![Pressery SPV](https://d194i88zucrucp.cloudfront.net/work/Pressery_SPV-lg.jpg)
+

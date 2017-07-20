@@ -5,7 +5,7 @@ tileWidth: 600
 tileHeight: 548
 ---
 
-# Audi TDI Brochure
-### Subtitle
+# Audi
+### TDI Brochure
 ![Audi TDI Cover](https://d194i88zucrucp.cloudfront.net/work/Audi_TDIcover-lg.jpg)
 ![Audi TDI Spread](https://d194i88zucrucp.cloudfront.net/work/Audi_TDIspread-lg.jpg)

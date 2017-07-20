@@ -31,6 +31,11 @@ const style = css(
     fontSize: 12,
     marginBottom: 2,
   }),
+  select('& img[alt="Amy Kitt"]', {
+    width: 120,
+    height: 120,
+    fontSize: 12,
+  }),
 )
 
 export default ({ source, ...props }: Props) => (

@@ -2,12 +2,16 @@
 title: About
 ---
 
-![Amy Kitt](https://d194i88zucrucp.cloudfront.net/amy-kitt.jpg)
-
 # Amy Kitt
 
-This is the about page. It probably has some words, maybe a few of
-those [links](https://google.com). Probably a reference to Mansfield and
-maybe even Eaves. Might be a good idea to mention the city of
-Denver. State of Colorado. Maybe some other stuff?
+![Amy Kitt](https://d194i88zucrucp.cloudfront.net/amy-kitt.jpg)
 
+hello. I am a freelance designer with a focus on branding + identity.
+
+From concept to build-out, or stepping into a project in the middle, I enjoy collaboration with agencies, small design shops, organizations and independent companies/individuals. I mostly park my laptop in Denver, CO where Mansfield, my super grumpy 11-year old Bernese Mountain Dog acts as office manager. (He gets paid in belly rubs & biscuits). When I’m not designing I snowboard, snowshoe, x-country ski, do yoga and wog (jog very slowly). 
+
+DISCIPLINE STRENGTHS
+icon + symbol design
+branding/visual design language
+print + collateral design
+interactive 

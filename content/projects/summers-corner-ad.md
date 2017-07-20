@@ -1,10 +1,12 @@
 ---
-title: Summers Corner Ad
+title: Summers Corner Brand Ad
 tile: https://d194i88zucrucp.cloudfront.net/work/SC_S-thumb-xs.jpg
 tileWidth: 600
 tileHeight: 675
 ---
 
-# Summers Corner Ad
-### Subtitle
+# Summers Corner
+### Brand Ad
 ![Summers Corner Ad](https://d194i88zucrucp.cloudfront.net/work/SC_Sspread-lg.jpg)
+
+Created in partnership with Strada Advertising, Denver CO [stradamade.com](http://www.stradamade.com)

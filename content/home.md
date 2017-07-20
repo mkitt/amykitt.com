@@ -1,7 +1,7 @@
 ---
 title: Home
 tiles:
-  - instagram-brochure
+  - instagram-printed-matter
   - ramble-hotel
   - audi-r8
   - summers-corner-journal
@@ -9,22 +9,22 @@ tiles:
   - laurus
   - instagram-nyc
   - factory-identity
-  - cornerhouse
+  - corner-house-cafe
   - fling
-  - factory-portfolio-hard-cover
+  - factory-brand-book-v10
   - summers-corner-grand-opening
   - happybunny
-  - factory-portfolio-soft-cover
+  - factory-brand-book-v11
   - john-huet
-  - lft
+  - live-for-this-fitness
   - summers-corner-feather
-  - audi-covers
+  - audi-printed-matter
   - cotton-blend
   - fresh-jets
   - true-blue
   - mode-set
   - aspen-x
-  - callaway-technology-icons
+  - callaway-technology-icon-system
   - summers-corner-ad
   - muse-studio
   - oakley-eyewear

@@ -5,6 +5,6 @@ tileWidth: 600
 tileHeight: 548
 ---
 
-# True Blue Packaging
-### Subtitle
+# True Blue
+### Brand Identity/Packaging
 ![TrueBlue](https://d194i88zucrucp.cloudfront.net/work/TrueBlue-lg.jpg)
