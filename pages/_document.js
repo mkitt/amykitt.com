@@ -59,6 +59,7 @@ const globalStyles = `
     padding: 0;
     border: 0;
   }
+  img { font-size: 0.75em; border: 0; outline: 0; }
 `.replace(/\n/g, '')
 
 export default class MyDocument extends Document {

@@ -19,7 +19,6 @@ const style = css(
   }),
 )
 
-
 const Button = ({ className, ...props }: Props) => (
   <button
     className={`${style} ${className || ''}`}
