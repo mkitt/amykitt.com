@@ -67,7 +67,7 @@ const jsonFiles = fs.readdirSync(outputDir).filter(file => (
 ))
 
 const all = jsonFiles.map(filename => (
-  JSON.parse(fs.readFileSync(path.join(outputDir, filename), 'utf-8'))
-)).reduce((acc, val) => Object.assign({}, acc, val), {})
+  filename === 'all.json' ? null : JSON.parse(fs.readFileSync(path.join(outputDir, filename), 'utf-8'))
+)).filter(value => value !== null).reduce((acc, val) => Object.assign({}, acc, val), {})
 
 writeFile('all', JSON.stringify(all))

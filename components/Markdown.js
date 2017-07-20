@@ -10,6 +10,8 @@ type Props = {
 // Markdown styles
 const style = css(
   {
+    fontSize: 14,
+    position: 'relative',
     color: '#858585',
   },
   select('& h1, & h2', {
@@ -32,9 +34,23 @@ const style = css(
     marginBottom: 2,
   }),
   select('& img[alt="Amy Kitt"]', {
-    width: 120,
-    height: 120,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: 240,
+    height: 240,
     fontSize: 12,
+  }),
+  select('& ul', {
+    margin: 0,
+    padding: 0,
+    listStyle: 'none',
+  }),
+  select('#about &', {
+    paddingLeft: 260,
+  }),
+  select('#about & h1', {
+    fontSize: 18,
   }),
 )
 
