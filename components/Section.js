@@ -11,7 +11,6 @@ const style = css(
     marginLeft: 'auto',
     paddingRight: 20,
     paddingLeft: 20,
-    outline: '1px dotted blue',
   },
   media3({
     paddingRight: 80,

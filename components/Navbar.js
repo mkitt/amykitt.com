@@ -33,7 +33,7 @@ const navStyle = css({
   zIndex: 5,
   height: 160,
   color: '#7c7c7c',
-  backgroundColor: '#f6f6f6',
+  backgroundColor: '#fff',
 })
 
 const wrapperStyle = css(
@@ -49,7 +49,6 @@ const wrapperStyle = css(
     marginLeft: 'auto',
     paddingRight: 20,
     paddingLeft: 20,
-    outline: '1px dotted magenta',
   },
   media3({
     paddingRight: 80,
