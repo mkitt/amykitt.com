@@ -1,5 +1,6 @@
 // @flow
 import React from 'react'
+import css from '../styles/css'
 
 // const assetPath = 'https://d194i88zucrucp.cloudfront.net/work'
 
@@ -12,6 +13,16 @@ type Props = {
   onLoadSuccess?: Function | null,
   onLoadFailure?: Function | null,
 }
+
+const animateColorCycle = css.keyframes('animateRotate', {
+  '0%': { backgroundColor: '#7c7c7c' },
+  '50%': { backgroundColor: '#e1aee8' },
+  '100%': { backgroundColor: '#7c7c7c' },
+})
+
+const style = css({
+  animation: `${animateColorCycle} 3s infinite linear`,
+})
 
 export default class extends React.PureComponent {
   props: Props
@@ -83,7 +94,7 @@ export default class extends React.PureComponent {
     return (
       <img
         alt={src.replace('-', ' ').replace('.jpg', '')}
-        className={className}
+        className={`${className || ''} ${style}`}
         src={src}
         width={width}
         height={height}
