@@ -8,7 +8,12 @@ import Layout from '../components/Layout'
 import Section from '../components/Section'
 import Projects from '../components/Projects'
 import ProjectModal from '../components/ProjectModal'
-import { addResizeObserver, removeResizeObserver } from '../lib/viewport'
+import {
+  addKeyObserver,
+  removeKeyObserver,
+  addResizeObserver,
+  removeResizeObserver,
+} from '../lib/viewport'
 import type { About, Home, Project, ResizeProps, Url } from '../types/app.js.flow'
 
 export type Props = {
@@ -25,6 +30,8 @@ type State = {
   viewportSize: string,
   viewportWidth: number,
 }
+
+const ESC = 27
 
 const selectId = (props, state, vo) => vo.id
 const selectProjects = props => props.projects
@@ -72,10 +79,12 @@ export default class extends React.PureComponent {
 
   componentDidMount() {
     addResizeObserver(this)
+    addKeyObserver(ESC, this.setProject)
   }
 
   componentWillUnmount() {
     removeResizeObserver(this)
+    removeKeyObserver(ESC, this.setProject)
   }
 
   onClickProject = ({ currentTarget }: any) => {

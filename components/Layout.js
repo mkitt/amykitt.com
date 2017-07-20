@@ -20,13 +20,32 @@ type Props = {
   title?: string,
 }
 
+const title = 'Amy Kitt Design'
+const url = 'https://amykitt.com/'
+const favicon = '/static/favicon.png'
+const description = 'hello. I am a freelance designer with a focus on branding + identity.'
+
 const Layout = (props: Props) => (
   <div>
     <Head>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      { props.title && <title>{props.title}</title> }
+      <title>{props.title || title}</title>
+      <meta name="referrer" content="always" />
+      <meta name="application-name" content={props.title || title} />
+      <meta name="subject" content={description} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content={title} />
+      <meta property="og:image" content={favicon} />
+      <meta property="og:description" content={description} />
+      <meta name="twitter:site" content="@amykitt" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="name" itemProp="name" content={props.title || title} />
+      <meta name="url" itemProp="url" content={url} />
+      <meta name="image" itemProp="image" content={favicon} />
+      <meta name="description" itemProp="description" content={description} />
       <link href="/static/favicon.ico" rel="shortcut icon" type="image/x-icon" />
       <link href="/static/favicon.svg" color="#000" rel="mask-icon" />
     </Head>
