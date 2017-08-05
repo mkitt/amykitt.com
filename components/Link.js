@@ -21,7 +21,7 @@ const Component = ({ as, children, href, ...props }: Props) => (
         {children}
       </a>
     </Link>
-  :
+    :
     <a href={href} {...props} target="_blank" rel="noopener noreferrer">
       {children}
     </a>

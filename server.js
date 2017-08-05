@@ -13,24 +13,24 @@ const handle = app.getRequestHandler()
 // const matchProjects = route('/projects/:id')
 
 app.prepare()
-.then(() => {
-  const server = express()
-  server.use(cors())
-  server.use(bodyParser.json())
-  server.use(bodyParser.urlencoded({ extended: true }))
+  .then(() => {
+    const server = express()
+    server.use(cors())
+    server.use(bodyParser.json())
+    server.use(bodyParser.urlencoded({ extended: true }))
 
-  // server.get('/projects/:id', (req, res) => {
-  //   const { pathname, query } = parse(req.url, true)
-  //   const params = matchProjects(pathname)
-  //   return app.render(req, res, '/projects', Object.assign(params, query))
-  // })
+    // server.get('/projects/:id', (req, res) => {
+    //   const { pathname, query } = parse(req.url, true)
+    //   const params = matchProjects(pathname)
+    //   return app.render(req, res, '/projects', Object.assign(params, query))
+    // })
 
-  server.get('*', (req, res) => (
-    handle(req, res)
-  ))
+    server.get('*', (req, res) => (
+      handle(req, res)
+    ))
 
-  server.listen(port, (err) => {
-    if (err) throw err
-    console.log(`> Ready on http://localhost:${port}`) // eslint-disable-line
+    server.listen(port, (err) => {
+      if (err) throw err
+      console.log(`> Ready on http://localhost:${port}`) // eslint-disable-line
+    })
   })
-})
