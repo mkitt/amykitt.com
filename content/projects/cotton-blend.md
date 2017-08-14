@@ -9,7 +9,6 @@ tileHeight: 548
 ### A T-shirt Art Show 
 ![Cotton Blend 1](https://d194i88zucrucp.cloudfront.net/work/CottonBlend1-lg.jpg)
 ![Cotton Blend 2](https://d194i88zucrucp.cloudfront.net/work/CottonBlend2-lg.jpg)
-![Cotton Blend 3](https://d194i88zucrucp.cloudfront.net/work/CottonBlend3-lg.jpg)
 ![Cotton Blend 4](https://d194i88zucrucp.cloudfront.net/work/CottonBlend4-lg.jpg)
 ![Cotton Blend 5](https://d194i88zucrucp.cloudfront.net/work/CottonBlend5-lg.jpg)
 ![Cotton Blend 6](https://d194i88zucrucp.cloudfront.net/work/CottonBlend6-lg.jpg)

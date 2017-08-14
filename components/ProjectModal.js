@@ -3,11 +3,14 @@ import React from 'react'
 import css, { media3 } from '../styles/css'
 import Dismiss from './Dismiss'
 import Markdown from './Markdown'
+import ProjectPaddles from './ProjectPaddles'
 import View from './View'
 import type { Project } from '../types/app.js.flow'
 
 type Props = {
   onCloseModal: Function,
+  onNextDetail: Function,
+  onPrevDetail: Function,
   project: Project | null | void,
 }
 
@@ -37,7 +40,7 @@ const activeStyle = css({
 const markdownStyle = css(
   {
     position: 'relative',
-    maxWidth: 1290,
+    maxWidth: 1292,
     minHeight: 'calc(100vh - 160px)',
     paddingTop: 15,
     paddingRight: 20,
@@ -47,6 +50,7 @@ const markdownStyle = css(
     marginRight: 'auto',
     marginLeft: 'auto',
     backgroundColor: '#fff',
+    border: '5px solid #fff',
   },
   media3({
     paddingRight: 80,
@@ -82,7 +86,7 @@ export default class extends React.PureComponent {
   }
 
   render() {
-    const { project } = this.props
+    const { onNextDetail, onPrevDetail, project } = this.props
     if (!project) {
       return <View className={`Modal ${style} ${inactiveStyle}`} />
     }
@@ -95,6 +99,10 @@ export default class extends React.PureComponent {
         <View className={markdownStyle}>
           <Markdown
             source={project.body}
+          />
+          <ProjectPaddles
+            onNextDetail={onNextDetail}
+            onPrevDetail={onPrevDetail}
           />
         </View>
         <Dismiss className="jsDismissModal" />

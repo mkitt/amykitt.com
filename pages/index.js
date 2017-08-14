@@ -4,6 +4,7 @@ import React from 'react'
 import { createSelector } from 'reselect'
 import { indexPath } from '../networking/api'
 import AboutView from '../components/AboutView'
+import HorizontalRule from '../components/HorizontalRule'
 import Layout from '../components/Layout'
 import Section from '../components/Section'
 import Projects from '../components/Projects'
@@ -102,6 +103,30 @@ export default class extends React.PureComponent {
     this.setState({ ...props })
   }
 
+  onPrevDetail = () => {
+    const { project } = this.state
+    if (!project || !project.id) { return }
+    const works = selectWorkProjects(this.props)
+    const currentIndex = works.indexOf(project)
+    const prevIndex = currentIndex === 0 ? works.length - 1 : currentIndex - 1
+    const prevProject = works[prevIndex]
+    if (prevProject) {
+      this.setState({ project: prevProject })
+    }
+  }
+
+  onNextDetail = () => {
+    const { project } = this.state
+    if (!project || !project.id) { return }
+    const works = selectWorkProjects(this.props)
+    const currentIndex = works.indexOf(project)
+    const nextIndex = currentIndex === works.length - 1 ? 0 : currentIndex + 1
+    const nextProject = works[nextIndex]
+    if (nextProject) {
+      this.setState({ project: nextProject })
+    }
+  }
+
   setProject = (id: string | null | void) => {
     const project = selectProject(this.props, this.state, { id })
     if (project !== this.state.project) {
@@ -116,7 +141,7 @@ export default class extends React.PureComponent {
     const works = selectWorkProjects(this.props)
     return (
       <Layout pathname={url.pathname} title="Hello.">
-        <Section id="work">
+        <Section id="work" style={{ marginBottom: 80 }}>
           <Projects
             allowableWidth={allowableGridWidth}
             columnCount={viewportColumnCount}
@@ -124,6 +149,7 @@ export default class extends React.PureComponent {
             projects={works}
           />
         </Section>
+        <HorizontalRule />
         <Section id="about">
           <AboutView
             about={about}
@@ -131,6 +157,8 @@ export default class extends React.PureComponent {
         </Section>
         <ProjectModal
           onCloseModal={this.onCloseModal}
+          onNextDetail={this.onNextDetail}
+          onPrevDetail={this.onPrevDetail}
           project={project}
         />
       </Layout>

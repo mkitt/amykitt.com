@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import css, { hover } from '../styles/css'
+import css, { hover, media3 } from '../styles/css'
 import Button from './Button'
 import { XIcon } from './Icons'
 
@@ -15,10 +15,11 @@ const style = css(
     top: 24,
     right: 24,
     zIndex: 2,
-    color: '#fff',
+    color: '#7c7c7c',
     transition: 'color 0.2s',
   },
   hover({ color: '#000' }),
+  media3({ position: 'fixed' }),
 )
 
 const Dismiss = ({ className, title, ...props }: Props) => (

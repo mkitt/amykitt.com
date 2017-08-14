@@ -35,12 +35,12 @@ tiles:
   - revo-brochure
   - audi-tdi
   - oakley-womens-campaign
+  - pressery
   - summit-sky-ranch
   - revo-jimmy-chin
   - true-north
   - spanish-peaks
   - more-mavericks
-  - pressery
 ---
 
 # Home
