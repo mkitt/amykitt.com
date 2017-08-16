@@ -40,7 +40,7 @@ const style = css(
   }),
   select('& img[alt="Amy Kitt"]', {
     width: 120,
-    height: 120,
+    height: 360,
     fontSize: 12,
   }),
   media3(select('& img[alt="Amy Kitt"]', {
