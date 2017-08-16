@@ -2,7 +2,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
-import { renderStatic } from 'glamor-server'
+import { renderStatic } from 'glamor/server'
 
 const globalStyles = `
   *, *::before, *::after { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
