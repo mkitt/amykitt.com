@@ -14,10 +14,17 @@ const style = css({
   paddingBottom: 20,
 })
 
-export default ({ about, ...props }: Props) => (
-  <View className={style} {...props} >
-    <Markdown
-      source={about.body}
-    />
-  </View>
-)
+export default class extends React.PureComponent {
+  props: Props
+
+  render() {
+    const { about, ...props } = this.props
+    return (
+      <View className={style} {...props} >
+        <Markdown
+          source={about.body}
+        />
+      </View>
+    )
+  }
+}
