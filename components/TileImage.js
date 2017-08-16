@@ -2,8 +2,6 @@
 import React from 'react'
 import css from '../styles/css'
 
-// const assetPath = 'https://d194i88zucrucp.cloudfront.net/work'
-
 type Props = {
   allowableWidth: number,
   className?: string,
@@ -14,14 +12,8 @@ type Props = {
   onLoadFailure?: Function | null,
 }
 
-const animateColorCycle = css.keyframes('animateRotate', {
-  '0%': { backgroundColor: '#7c7c7c' },
-  '50%': { backgroundColor: '#e1aee8' },
-  '100%': { backgroundColor: '#7c7c7c' },
-})
-
 const style = css({
-  animation: `${animateColorCycle} 3s infinite linear`,
+  backgroundColor: '#7c7c7c',
 })
 
 export default class extends React.PureComponent {
