@@ -18,3 +18,5 @@ tileHeight: 548
 ![Cotton Blend 10](https://d194i88zucrucp.cloudfront.net/work/CottonBlend10-lg.jpg)
 
 Cotton Blend is a limited edition t-shirt art show. Proceeds from the show are donated to DAVA.org, a non-profit in Denver, CO that provides after school and summer art classes and mentorships for kids, most of whom no longer have art in their schools. The show has currently run 2 years in a row raising over $5k for the organization. 
+
+Participants in past years include: Aaron Ray, Anthony Cozzi, Anthony Dimitre, Berger & Fohr, CacheFlowe, Chris Nguyen, Cast Iron Design, Debbie Clapper / gneural, Elliott Hasse, Emily Philpott/Gorilla, Elysia Syriac, Evan Huwa, Garrett Deheer, Geoff Allen / FUN is OK, Geoffrey Thomas/Guiceworks, Greg Ryan, Jeff Euteneuer, Jeff Keil, Jonathon Alsobrook, Jorge Lamora, Justin Fuller / goodappl.es, Kris Fry, Lisa Wright / Obsesso Processo, no bones left Elsa Carenbauer, Pedro Saldarriaga, Sean Herman, Sean Klassen

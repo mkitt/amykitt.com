@@ -2,7 +2,7 @@
 title: About
 ---
 
-![Amy Kitt](https://d194i88zucrucp.cloudfront.net/amy-kitt.jpg)
+![Amy Kitt](https://d194i88zucrucp.cloudfront.net/amy-kitt-trifecta.jpg)
 
 # Amy Kitt
 
@@ -22,4 +22,8 @@ print + collateral design
 interactive   
 
 ## Brand Highlights
-Aspen/Snowmass, Audi of America, Backyard Soda Co., Boa Technology, Brine Lacrosse, Burton Snowboards, Callaway Golf, Copper Mountain, Eagle Creek, Gregory Packs, Instagram, John Huet Photography, MCA Denver, Muse Studio, The North Face, Oakley, POWDR Co., Pressery, Red Camper, Revo, Scarpa, Vail Resorts, Vans, Westword, Winter Park/Mary Jane
+Aspen/Snowmass, Audi of America, Backyard Soda Co., Boa Technology, Brine
+Lacrosse, Burton Snowboards, Callaway Golf, Copper Mountain, Eagle Creek,
+Gregory Packs, Instagram, John Huet Photography, MCA Denver, Muse Studio, The
+North Face, Oakley, POWDR Co., Pressery, Red Camper, Revo, Scarpa, Vail Resorts,
+Vans, Westword, Winter Park/Mary Jane

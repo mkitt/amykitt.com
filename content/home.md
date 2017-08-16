@@ -22,6 +22,7 @@ tiles:
   - cotton-blend
   - fresh-jets
   - true-blue
+  - the-barre-standard
   - mode-set
   - aspen-x
   - callaway-technology-icon-system

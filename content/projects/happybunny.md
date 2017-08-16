@@ -9,3 +9,4 @@ tileHeight: 548
 ### Brand Identity & App Design/Concept
 ![HappyBunny 1](https://d194i88zucrucp.cloudfront.net/work/HappyBunny1-lg.jpg)
 ![HappyBunny 2](https://d194i88zucrucp.cloudfront.net/work/HappyBunny2-lg.jpg)
+![HappyBunny 3](https://d194i88zucrucp.cloudfront.net/work/HappyBunny3-lg.jpg)
