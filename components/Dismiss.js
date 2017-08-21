@@ -25,7 +25,7 @@ const style = css(
 const Dismiss = ({ className, title, ...props }: Props) => (
   <Button
     className={`${className || ''} ${style}`}
-    title={title || 'Dismiss'}
+    title={title}
     {...props}
   >
     <XIcon />
@@ -34,7 +34,7 @@ const Dismiss = ({ className, title, ...props }: Props) => (
 
 Dismiss.defaultProps = {
   className: '',
-  title: null,
+  title: 'Dismiss',
 }
 
 export default Dismiss

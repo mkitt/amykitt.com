@@ -12,8 +12,8 @@ type SvgProps = {
 const Svg = ({ children, size, width, height, viewBox, ...props }: SvgProps) => (
   <svg
     aria-hidden
-    height={size || height}
-    width={size || width}
+    height={size != null ? size : height}
+    width={size != null ? size : width}
     viewBox={viewBox}
     {...props}
   >
