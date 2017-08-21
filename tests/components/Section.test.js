@@ -1,15 +1,17 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Navbar from '../../components/Navbar'
+import Section from '../../components/Section'
 
-describe('Navbar', () => {
+describe('Section', () => {
   let component
 
   beforeEach(() => {
-    component = <Navbar pathname="/" />
+    component = (
+      <Section />
+    )
   })
 
-  it('shows the correct snapshot for the Navbar component tree', () => {
+  it('shows the correct snapshot for the Section component tree', () => {
     const tree = renderer.create(component).toJSON()
     expect(tree).toMatchSnapshot()
   })

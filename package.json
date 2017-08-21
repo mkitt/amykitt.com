@@ -1,6 +1,6 @@
 {
   "name": "amykitt",
-  "description": "Web sites for Amy Kitt",
+  "description": "Web site for Amy Kitt",
   "homepage": "https://amykitt.com/",
   "version": "0.0.1",
   "license": "MIT",
@@ -20,7 +20,6 @@
   },
   "dependencies": {
     "body-parser": "1.17.2",
-    "classnames": "2.2.5",
     "cors": "2.8.4",
     "dotenv": "4.0.0",
     "express": "4.15.3",
@@ -29,7 +28,6 @@
     "isomorphic-fetch": "2.2.1",
     "lodash": "4.17.4",
     "next": "3.0.3",
-    "path-match": "1.2.4",
     "react": "15.6.1",
     "react-dom": "15.6.1",
     "react-markdown": "2.5.0",
@@ -40,12 +38,10 @@
     "babel-jest": "20.0.3",
     "babel-preset-env": "1.6.0",
     "babel-preset-flow": "6.23.0",
-    "enzyme": "2.9.1",
     "eslint": "4.1.1",
     "eslint-config-mkitt": "2.1.0",
     "flow-bin": "0.52.0",
     "jest": "20.0.4",
-    "react-addons-test-utils": "15.6.0",
     "react-test-renderer": "15.6.1"
   },
   "browserslist": [

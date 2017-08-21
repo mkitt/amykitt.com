@@ -1,15 +1,15 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Navbar from '../../components/Navbar'
+import NavbarBullet from '../../components/NavbarBullet'
 
-describe('Navbar', () => {
+describe('NavbarBullet', () => {
   let component
 
   beforeEach(() => {
-    component = <Navbar pathname="/" />
+    component = <NavbarBullet />
   })
 
-  it('shows the correct snapshot for the Navbar component tree', () => {
+  it('shows the correct snapshot for the NavbarBullet component tree', () => {
     const tree = renderer.create(component).toJSON()
     expect(tree).toMatchSnapshot()
   })

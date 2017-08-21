@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavbarBullet shows the correct snapshot for the NavbarBullet component tree 1`] = `
+<span
+  className={
+    Object {
+      "data-css-3eixqd": "",
+    }
+  }
+>
+  •
+</span>
+`;

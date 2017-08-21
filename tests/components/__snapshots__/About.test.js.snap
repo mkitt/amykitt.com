@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutView shows the correct snapshot for the About component tree 1`] = `
+<div
+  className={
+    Object {
+      "data-css-1rdbgdp": "",
+    }
+  }
+>
+  <div
+    className="css-dzce0j"
+  >
+    <p>
+      About 
+      <em>
+        body
+      </em>
+    </p>
+  </div>
+</div>
+`;

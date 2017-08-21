@@ -29,4 +29,3 @@ Svg.defaultProps = {
 }
 
 export default Svg
-

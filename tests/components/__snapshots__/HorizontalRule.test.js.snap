@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HorizontalRule shows the correct snapshot for the HorizontalRule component tree 1`] = `
+<div
+  className={
+    Object {
+      "data-css-1atcpp3": "",
+    }
+  }
+>
+  <hr
+    className={
+      Object {
+        "data-css-1ebtlzk": "",
+      }
+    }
+  />
+</div>
+`;

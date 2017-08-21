@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Markdown shows the correct snapshot for the Markdown component tree 1`] = `
+<div
+  className="css-dzce0j"
+>
+  <p>
+    Hello 
+    <em>
+      world
+    </em>
+    .
+  </p>
+</div>
+`;

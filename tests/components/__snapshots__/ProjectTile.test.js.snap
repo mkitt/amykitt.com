@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectTile shows the correct snapshot for the ProjectTile component tree 1`] = `
+<button
+  className="css-1fqszn3 css-10xwomj"
+  data-id="project-1"
+  title="Project 1 title"
+  type="button"
+>
+  <img
+    alt="project 1-tiles"
+    className=" css-bagnb1"
+    height={400}
+    src="project-1-tiles"
+    width={600}
+  />
+</button>
+`;

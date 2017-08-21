@@ -37,22 +37,22 @@ const ESC = 27
 const selectId = (props, state, vo) => vo.id
 const selectProjects = props => props.projects
 const selectHomeTiles = props => props.home.tiles
+const selectViewportColumnCount = state => state.viewportColumnCount || 2
+const selectViewportWidth = state => state.viewportWidth || 0
 
-const selectProject = createSelector(
+export const selectProject = createSelector(
   [selectId, selectProjects], (id, projects) => (
     projects.find(project => project.id === id)
   ),
 )
 
-const selectWorkProjects = createSelector(
+export const selectWorkProjects = createSelector(
   [selectProjects, selectHomeTiles], (projects, tiles) => (
     tiles.map(id => projects.find(project => project.id === id))
   ),
 )
 
-const selectViewportColumnCount = state => state.viewportColumnCount || 2
-const selectViewportWidth = state => state.viewportWidth || 0
-const selectAllowableGridWidth = createSelector(
+export const selectAllowableGridWidth = createSelector(
   [selectViewportColumnCount, selectViewportWidth], (columnCount, viewportWidth) => {
     const columnPadding = 10
     const vw = viewportWidth - (columnCount < 3 ? 40 : 160) // site padding :(

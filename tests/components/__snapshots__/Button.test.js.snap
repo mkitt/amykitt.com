@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button shows the correct snapshot for the Button component tree 1`] = `
+<button
+  className="css-1fqszn3 ButtonClassName"
+  onClick={[Function]}
+  type="button"
+/>
+`;

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link shows the correct snapshot for the Link component tree (external link) 1`] = `
+<a
+  href="https://www.google.com/"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  External Link
+</a>
+`;
+
+exports[`Link shows the correct snapshot for the Link component tree (next.js) 1`] = `
+<a
+  href="/projects/project-1"
+  onClick={[Function]}
+>
+  Next.js Link
+</a>
+`;

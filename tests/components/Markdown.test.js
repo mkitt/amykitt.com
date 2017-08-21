@@ -1,15 +1,15 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Navbar from '../../components/Navbar'
+import Markdown from '../../components/Markdown'
 
-describe('Navbar', () => {
+describe('Markdown', () => {
   let component
 
   beforeEach(() => {
-    component = <Navbar pathname="/" />
+    component = <Markdown source="Hello _world_." />
   })
 
-  it('shows the correct snapshot for the Navbar component tree', () => {
+  it('shows the correct snapshot for the Markdown component tree', () => {
     const tree = renderer.create(component).toJSON()
     expect(tree).toMatchSnapshot()
   })

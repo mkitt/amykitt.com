@@ -12,4 +12,3 @@ const style = css({
 export default() => (
   <span className={style}>&bull;</span>
 )
-

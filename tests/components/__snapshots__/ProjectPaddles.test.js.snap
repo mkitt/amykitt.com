@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectPaddles shows the correct snapshot for the ProjectPaddles component tree 1`] = `
+<div
+  className={
+    Object {
+      "data-css-1da2mo1": "",
+    }
+  }
+>
+  <button
+    className="css-1fqszn3 css-12ml4zg"
+    onClick={[Function]}
+    type="button"
+  >
+    Prev
+  </button>
+  <span
+    className={
+      Object {
+        "data-css-1qvhb5d": "",
+      }
+    }
+  >
+     / 
+  </span>
+  <button
+    className="css-1fqszn3 css-12ml4zg"
+    onClick={[Function]}
+    type="button"
+  >
+    Next
+  </button>
+</div>
+`;
