@@ -101,6 +101,21 @@ exports[`/ shows the correct snapshot for the index page tree 1`] = `
           >
             About
           </a>
+          <span
+            className={
+              Object {
+                "data-css-3eixqd": "",
+              }
+            }
+          >
+            •
+          </span>
+          <a
+            className="css-e3p90y "
+            href="mailto:amy.kitt@gmail.com"
+          >
+            Contact
+          </a>
         </div>
       </div>
     </div>

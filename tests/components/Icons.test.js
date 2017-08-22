@@ -13,4 +13,3 @@ describe('Icons', () => {
     expect(tree).toMatchSnapshot()
   })
 })
-

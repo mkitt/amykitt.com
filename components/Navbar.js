@@ -146,6 +146,13 @@ export default class extends React.PureComponent {
               >
                 About
               </NavbarLink>
+              <NavbarBullet />
+              <NavbarLink
+                href="mailto:amy.kitt@gmail.com"
+                isActive={false}
+              >
+                Contact
+              </NavbarLink>
             </View>
           </View>
         </View>
