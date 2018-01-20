@@ -8,18 +8,18 @@ type Props = {
   src: string,
   naturalHeight: number,
   naturalWidth: number,
-  onLoadSuccess?: Function | null,
-  onLoadFailure?: Function | null,
+  onLoadSuccess?: ?(?Image) => {},
+  onLoadFailure?: ?() => {},
+}
+
+type State = {
 }
 
 const style = css({
   backgroundColor: '#7c7c7c',
 })
 
-export default class extends React.PureComponent {
-  props: Props
-  img: ?Image
-
+export default class extends React.PureComponent<Props, State> {
   static defaultProps = {
     className: '',
     onLoadSuccess: null,
@@ -63,6 +63,8 @@ export default class extends React.PureComponent {
     const width = Math.round(height * ratio)
     return { width, height }
   }
+
+  img: ?Image
 
   createLoader() {
     this.disposeLoader()

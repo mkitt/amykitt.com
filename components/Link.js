@@ -1,12 +1,12 @@
 // @flow
-import React from 'react'
+import React, { type Node } from 'react'
 import Link from 'next/link'
 
 const isTestEnv = process.env.NODE_ENV !== 'test'
 
 type Props = {
-  as?: string,
-  children: React.Element<*>,
+  as?: ?string,
+  children: Node,
   href: string,
 }
 

@@ -1,12 +1,12 @@
 // @flow
-import React from 'react'
+import React, { type Node } from 'react'
 
-type SvgProps = {
-  children?: React.Element<*>,
+export type SvgProps = {
+  children?: Node,
   width?: number,
   height?: number,
   size?: number,
-  viewBox: string,
+  viewBox?: ?string,
 }
 
 const Svg = ({ children, size, width, height, viewBox, ...props }: SvgProps) => (
@@ -26,6 +26,7 @@ Svg.defaultProps = {
   width: 32,
   height: 32,
   size: null,
+  viewBox: null,
 }
 
 export default Svg

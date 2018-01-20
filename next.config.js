@@ -7,11 +7,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = {
   webpack: (config) => {
-    config.plugins.push(
-      new webpack.DefinePlugin({
-        'process.env.DOMAIN': JSON.stringify(process.env.DOMAIN || 'http://localhost:3000'),
-      })
-    )
+    config.plugins.push(new webpack.DefinePlugin({
+      'process.env.DOMAIN': JSON.stringify(process.env.DOMAIN || 'http://localhost:3000'),
+    }))
     return config
   }
 }

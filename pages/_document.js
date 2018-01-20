@@ -62,14 +62,21 @@ const globalStyles = `
   img { font-size: 0.75em; border: 0; outline: 0; }
 `.replace(/\n/g, '')
 
+type Generic<T> = T
+
+type InitProps = {
+  renderPage: () => {},
+}
+
 export default class MyDocument extends Document {
-  static async getInitialProps({ renderPage }) {
+  static async getInitialProps({ renderPage }: InitProps) {
     const page = renderPage()
+    // $FlowFixMe
     const styles = renderStatic(() => page.html)
     return { ...page, ...styles }
   }
 
-  constructor(props: any) {
+  constructor(props: Generic<*>) {
     super(props)
     const { __NEXT_DATA__, ids } = props
     if (ids) {

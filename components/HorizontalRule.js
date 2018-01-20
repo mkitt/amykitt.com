@@ -25,8 +25,8 @@ const ruleStyle = css({
   padding: 0,
 })
 
-export default (props: any) => (
-  <div className={style} {...props}>
+export default () => (
+  <div className={style}>
     <hr className={ruleStyle} />
   </div>
 )

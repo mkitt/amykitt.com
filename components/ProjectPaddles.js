@@ -5,8 +5,8 @@ import Button from './Button'
 import View from './View'
 
 type Props = {
-  onNextDetail: Function,
-  onPrevDetail: Function,
+  onNextDetail: () => void,
+  onPrevDetail: () => void,
 }
 
 const style = css({

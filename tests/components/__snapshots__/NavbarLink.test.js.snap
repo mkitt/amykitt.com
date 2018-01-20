@@ -4,6 +4,7 @@ exports[`NavbarLink shows the correct snapshot for the NavbarLink component tree
 <a
   className="css-e3p90y css-863xba"
   href="/projects"
+  onFocus={[Function]}
   onMouseover={[Function]}
 >
   NavbarLink

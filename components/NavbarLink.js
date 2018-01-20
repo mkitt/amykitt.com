@@ -1,9 +1,9 @@
 // @flow
-import React from 'react'
+import React, { type Node } from 'react'
 import css, { hover } from '../styles/css'
 
 type Props = {
-  children: React.Element<*>,
+  children: Node,
   href: string,
   isActive: boolean,
 }

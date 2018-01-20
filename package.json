@@ -4,10 +4,6 @@
   "homepage": "https://amykitt.com/",
   "version": "0.0.1",
   "license": "MIT",
-  "engines": {
-    "node": "8.2.1",
-    "npm": "5.3.0"
-  },
   "scripts": {
     "dev": "node server.js",
     "prebuild": "node ./content.js",
@@ -19,30 +15,30 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
-    "body-parser": "1.17.2",
+    "body-parser": "1.18.2",
     "cors": "2.8.4",
     "dotenv": "4.0.0",
-    "express": "4.15.3",
-    "front-matter": "2.1.2",
+    "express": "4.16.2",
+    "front-matter": "2.3.0",
     "glamor": "2.20.40",
     "isomorphic-fetch": "2.2.1",
     "lodash": "4.17.4",
-    "next": "3.0.3",
-    "react": "15.6.1",
-    "react-dom": "15.6.1",
-    "react-markdown": "2.5.0",
+    "next": "4.2.3",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-markdown": "3.1.4",
     "reselect": "3.0.1"
   },
   "devDependencies": {
-    "babel-eslint": "7.2.3",
-    "babel-jest": "20.0.3",
-    "babel-preset-env": "1.6.0",
+    "babel-eslint": "8.2.1",
+    "babel-jest": "22.1.0",
+    "babel-preset-env": "1.6.1",
     "babel-preset-flow": "6.23.0",
-    "eslint": "4.1.1",
-    "eslint-config-mkitt": "2.1.0",
-    "flow-bin": "0.52.0",
-    "jest": "20.0.4",
-    "react-test-renderer": "15.6.1"
+    "eslint": "4.16.0",
+    "eslint-config-mkitt": "4.0.0",
+    "flow-bin": "0.63.1",
+    "jest": "22.1.4",
+    "react-test-renderer": "16.2.0"
   },
   "browserslist": [
     "> 1%",

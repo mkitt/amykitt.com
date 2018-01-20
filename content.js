@@ -47,8 +47,7 @@ files.map((filename) => {
 
 // Save out subdirectories to json
 const subdirs = fs.readdirSync(contentDir).filter(file => (
-  fs.statSync(path.join(contentDir, file)).isDirectory()),
-)
+  fs.statSync(path.join(contentDir, file)).isDirectory()))
 
 subdirs.map((subdirname) => {
   const subdir = path.join(__dirname, 'content', subdirname)

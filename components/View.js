@@ -1,6 +1,8 @@
 // @flow
 import React from 'react'
 
-export default (props: any) => (
+type Props = {}
+
+export default (props: Props) => (
   <div {...props} />
 )

@@ -13,6 +13,7 @@ describe('NavbarLink', () => {
         href="/projects"
         isActive
         onMouseover={noop}
+        onFocus={noop}
       >
         NavbarLink
       </NavbarLink>

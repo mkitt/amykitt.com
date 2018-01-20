@@ -1,6 +1,6 @@
 // @flow
 /* eslint-disable no-underscore-dangle */
-import React from 'react'
+import React, { type Node } from 'react'
 import Head from 'next/head'
 import { rehydrate } from 'glamor'
 import FeatureDetection from './FeatureDetection'
@@ -15,7 +15,7 @@ if (typeof window !== 'undefined') {
 }
 
 type Props = {
-  children?: React.Element<*>,
+  children?: Node,
   pathname: string,
   title?: string,
 }

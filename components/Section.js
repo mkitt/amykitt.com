@@ -18,6 +18,9 @@ const style = css(
   }),
 )
 
-export default (props: any) => (
+type Props = {
+}
+
+export default (props: Props) => (
   <section className={style} {...props} />
 )

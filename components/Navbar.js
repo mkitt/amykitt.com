@@ -66,16 +66,14 @@ const contentStyle = css({
 
 const selectViewportHeight = state => state.viewportHeight || 0
 
-const selectAboutY = createSelector(
-  [selectViewportHeight], (height) => {
-    const element = document.getElementById('about')
-    return element && height ? (element.offsetTop - 160) : NaN
-  },
-)
+const selectAboutY = createSelector([selectViewportHeight], (height) => {
+  const element = document.getElementById('about')
+  return element && height ? (element.offsetTop - 160) : NaN
+})
 
-const onClickToSection = (e: any) => {
+const onClickToSection = (e: SyntheticEvent<HTMLButtonElement>) => {
   e.preventDefault()
-  const href = e.target.getAttribute('href')
+  const href = e.currentTarget.getAttribute('href') || ''
   const selector = href.replace('#', '')
   if (selector === '/') {
     scrollViewport(0)
@@ -86,9 +84,8 @@ const onClickToSection = (e: any) => {
   scrollViewport(top || 0)
 }
 
-export default class extends React.PureComponent {
-  props: Props
-  state: State = {
+export default class extends React.PureComponent<Props, State> {
+  state = {
     isAboutActive: false,
     viewportColumnCount: 5,
     viewportHeight: 768,
@@ -110,18 +107,18 @@ export default class extends React.PureComponent {
 
   onScroll = (props: ScrollProps) => {
     const aboutY = selectAboutY(this.state)
-    const isAboutActive = !isNaN(aboutY) && props.scrollY >= aboutY
+    const isAboutActive = !Number.isNaN(aboutY) && props.scrollY >= aboutY
     if (this.state.isAboutActive !== isAboutActive) {
       this.setState({ isAboutActive })
     }
   }
 
   render() {
-    const { isAboutActive, viewportColumnCount } = this.state
+    const { isAboutActive, viewportColumnCount, viewportHeight } = this.state
     return (
       <nav className={navStyle}>
         <View className={wrapperStyle}>
-          { viewportColumnCount > 2 &&
+          { viewportColumnCount > 2 && viewportHeight > 0 &&
             <NavbarLogo
               href="/"
               isActive={!isAboutActive}

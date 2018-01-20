@@ -9,8 +9,11 @@ import type { Project } from '../types/app.js.flow'
 type Props = {
   allowableWidth: number,
   columnCount: number,
-  onClick: Function,
+  onClick: (SyntheticEvent<HTMLButtonElement>) => void,
   projects: Array<Project>,
+}
+
+type State = {
 }
 
 const wrapperStyles = css({
@@ -34,7 +37,8 @@ const selectProjects = props => props.projects
 const selectColumnCount = props => props.columnCount
 
 const selectProjectsInColumns = createSelector(
-  [selectProjects, selectColumnCount], (projects, columnCount) => {
+  [selectProjects, selectColumnCount],
+  (projects, columnCount) => {
     const columns = []
     for (let i = 0; i < columnCount; i += 1) { columns.push([]) }
     projects.forEach((item, index) => columns[index % columnCount].push(item))
@@ -42,9 +46,7 @@ const selectProjectsInColumns = createSelector(
   },
 )
 
-export default class extends React.PureComponent {
-  props: Props
-
+export default class extends React.PureComponent<Props, State> {
   render() {
     const { allowableWidth, columnCount, projects, onClick } = this.props
     if (!projects || !projects.length) {

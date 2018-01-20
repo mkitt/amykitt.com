@@ -8,10 +8,13 @@ import View from './View'
 import type { Project } from '../types/app.js.flow'
 
 type Props = {
-  onCloseModal: Function,
-  onNextDetail: Function,
-  onPrevDetail: Function,
-  project: Project | null | void,
+  onCloseModal: () => void,
+  onNextDetail: () => void,
+  onPrevDetail: () => void,
+  project: ?Project,
+}
+
+type State = {
 }
 
 const style = css({
@@ -61,9 +64,7 @@ const markdownStyle = css(
 
 let modalElement = null
 
-export default class extends React.PureComponent {
-  props: Props
-
+export default class extends React.PureComponent<Props, State> {
   componentDidUpdate() {
     const { project } = this.props
     if (!(document && document.body)) { return }
@@ -78,8 +79,8 @@ export default class extends React.PureComponent {
     }
   }
 
-  onClickModal = (e: any) => {
-    const classList = e.target.classList
+  onClickModal = (e: SyntheticEvent<HTMLButtonElement>) => {
+    const { classList } = e.currentTarget
     if (classList.contains('Modal') || classList.contains('jsDismissModal')) {
       this.props.onCloseModal()
     }

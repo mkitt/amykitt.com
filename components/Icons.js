@@ -1,8 +1,8 @@
 // @flow
 import React from 'react'
-import Svg from './Svg'
+import Svg, { type SvgProps } from './Svg'
 
-export const AKIcon = ({ ...props }: any) => (
+export const AKIcon = ({ ...props }: SvgProps) => (
   <Svg width={43} height={47} {...props} viewBox="0 0 73 80">
     <g>
       <path fill="#7c7c7c" d="M0,37.4468085 L0,29.5421277 L7.6313703,29.5421277 C19.0775814,28.9514894 25.2042934,24.9957447 25.2042934,8.90893617 L25.2042934,0 L33.7745975,0 L33.7745975,37.4468085 L0,37.4468085 Z" />
@@ -12,7 +12,7 @@ export const AKIcon = ({ ...props }: any) => (
   </Svg>
 )
 
-export const XIcon = ({ ...props }: any) => (
+export const XIcon = ({ ...props }: SvgProps) => (
   <Svg width={24} height={24} {...props} viewBox="0 0 24 24">
     <g stroke="currentColor">
       <line x1="2" y1="2" x2="22" y2="22" />

@@ -14,9 +14,7 @@ const style = css({
   paddingBottom: 20,
 })
 
-export default class extends React.PureComponent {
-  props: Props
-
+export default class extends React.PureComponent<Props> {
   render() {
     const { about, ...props } = this.props
     return (

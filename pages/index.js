@@ -25,7 +25,7 @@ export type Props = {
 }
 
 type State = {
-  project: Project | null | void,
+  project: ?Project,
   viewportColumnCount: number,
   viewportHeight: number,
   viewportSize: string,
@@ -40,20 +40,20 @@ const selectHomeTiles = props => props.home.tiles
 const selectViewportColumnCount = state => state.viewportColumnCount || 2
 const selectViewportWidth = state => state.viewportWidth || 0
 
-export const selectProject = createSelector(
-  [selectId, selectProjects], (id, projects) => (
-    projects.find(project => project.id === id)
-  ),
-)
+export const selectProject = createSelector([selectId, selectProjects], (id, projects) => (
+  projects.find(project => project.id === id)
+))
 
 export const selectWorkProjects = createSelector(
-  [selectProjects, selectHomeTiles], (projects, tiles) => (
+  [selectProjects, selectHomeTiles],
+  (projects, tiles) => (
     tiles.map(id => projects.find(project => project.id === id))
   ),
 )
 
 export const selectAllowableGridWidth = createSelector(
-  [selectViewportColumnCount, selectViewportWidth], (columnCount, viewportWidth) => {
+  [selectViewportColumnCount, selectViewportWidth],
+  (columnCount, viewportWidth) => {
     const columnPadding = 10
     const vw = viewportWidth - (columnCount < 3 ? 40 : 160) // site padding :(
     const width = Math.min(vw, 1310)
@@ -61,21 +61,19 @@ export const selectAllowableGridWidth = createSelector(
   },
 )
 
-export default class extends React.PureComponent {
-  props: Props
-  // eslint-disable-next-line
-  state: State = {
+export default class extends React.PureComponent<Props, State> {
+  static async getInitialProps() {
+    const res = await fetch(indexPath())
+    const json = await res.json()
+    return { ...json }
+  }
+
+  state = {
     project: null,
     viewportColumnCount: 5,
     viewportHeight: 768,
     viewportSize: 'xlarge',
     viewportWidth: 1440,
-  }
-
-  static async getInitialProps() {
-    const res = await fetch(indexPath())
-    const json = await res.json()
-    return { ...json }
   }
 
   componentDidMount() {
@@ -88,7 +86,7 @@ export default class extends React.PureComponent {
     removeKeyObserver(ESC, this.setProject)
   }
 
-  onClickProject = ({ currentTarget }: any) => {
+  onClickProject = ({ currentTarget }: SyntheticEvent<HTMLButtonElement>) => {
     const id = currentTarget && currentTarget.dataset && currentTarget.dataset.id
     if (id) {
       this.setProject(id)
@@ -100,7 +98,12 @@ export default class extends React.PureComponent {
   }
 
   onResize = (props: ResizeProps) => {
-    this.setState({ ...props })
+    const { viewportSize, viewportWidth, viewportHeight } = this.state
+    if (viewportSize !== props.viewportSize ||
+        viewportWidth !== props.viewportWidth ||
+        viewportHeight !== props.viewportHeight) {
+      this.setState({ ...props })
+    }
   }
 
   onPrevDetail = () => {
