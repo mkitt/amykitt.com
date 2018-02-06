@@ -17,16 +17,16 @@
   "dependencies": {
     "body-parser": "1.18.2",
     "cors": "2.8.4",
-    "dotenv": "4.0.0",
+    "dotenv": "5.0.0",
     "express": "4.16.2",
     "front-matter": "2.3.0",
     "glamor": "2.20.40",
     "isomorphic-fetch": "2.2.1",
-    "lodash": "4.17.4",
+    "lodash": "4.17.5",
     "next": "4.2.3",
     "react": "16.2.0",
     "react-dom": "16.2.0",
-    "react-markdown": "3.1.4",
+    "react-markdown": "3.1.5",
     "reselect": "3.0.1"
   },
   "devDependencies": {
@@ -34,9 +34,9 @@
     "babel-jest": "22.1.0",
     "babel-preset-env": "1.6.1",
     "babel-preset-flow": "6.23.0",
-    "eslint": "4.16.0",
-    "eslint-config-mkitt": "4.0.0",
-    "flow-bin": "0.63.1",
+    "eslint": "4.17.0",
+    "eslint-config-mkitt": "4.1.0",
+    "flow-bin": "0.64.0",
     "jest": "22.1.4",
     "react-test-renderer": "16.2.0"
   },
