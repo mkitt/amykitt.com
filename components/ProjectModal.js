@@ -9,8 +9,8 @@ import type { Project } from '../types/app.js.flow'
 
 type Props = {
   onCloseModal: () => void,
-  onNextDetail: () => void,
-  onPrevDetail: () => void,
+  onNextDetail: (e: SyntheticEvent<HTMLButtonElement>) => void,
+  onPrevDetail: (e: SyntheticEvent<HTMLButtonElement>) => void,
   project: ?Project,
 }
 

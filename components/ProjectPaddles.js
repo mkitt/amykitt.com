@@ -5,8 +5,8 @@ import Button from './Button'
 import View from './View'
 
 type Props = {
-  onNextDetail: () => void,
-  onPrevDetail: () => void,
+  onNextDetail: (e: SyntheticEvent<HTMLButtonElement>) => void,
+  onPrevDetail: (e: SyntheticEvent<HTMLButtonElement>) => void,
 }
 
 const style = css({

@@ -106,9 +106,10 @@ export default class extends React.PureComponent<Props, State> {
     }
   }
 
-  onPrevDetail = () => {
+  onPrevDetail = (e: SyntheticEvent<HTMLButtonElement>) => {
     const { project } = this.state
     if (!project || !project.id) { return }
+    if (e != null) { e.stopPropagation() }
     const works = selectWorkProjects(this.props)
     const currentIndex = works.indexOf(project)
     const prevIndex = currentIndex === 0 ? works.length - 1 : currentIndex - 1
@@ -118,9 +119,10 @@ export default class extends React.PureComponent<Props, State> {
     }
   }
 
-  onNextDetail = () => {
+  onNextDetail = (e: SyntheticEvent<HTMLButtonElement>) => {
     const { project } = this.state
     if (!project || !project.id) { return }
+    if (e != null) { e.stopPropagation() }
     const works = selectWorkProjects(this.props)
     const currentIndex = works.indexOf(project)
     const nextIndex = currentIndex === works.length - 1 ? 0 : currentIndex + 1
