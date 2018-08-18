@@ -1,8 +1,10 @@
 ---
 title: Home
 tiles:
+  - camp-hale
+  - ranch-resort-realty
   - instagram-printed-matter
-  - ramble-hotel
+  - backyard-soda-company
   - audi-r8
   - summers-corner-journal
   - instagram-badges
@@ -15,29 +17,32 @@ tiles:
   - summers-corner-grand-opening
   - happybunny
   - factory-brand-book-v11
-  - john-huet
+  - audi-tdi
   - live-for-this-fitness
+  - wendell
   - summers-corner-feather
-  - audi-printed-matter
+  - john-huet
   - cotton-blend
   - fresh-jets
   - true-blue
-  - the-barre-standard
   - mode-set
+  - the-barre-standard
   - aspen-x
   - callaway-technology-icon-system
   - summers-corner-ad
   - muse-studio
   - oakley-eyewear
   - roth
+  - elyson
   - obrien
   - revo-press-kit
   - innofin
   - revo-brochure
-  - audi-tdi
+  - audi-printed-matter
   - oakley-womens-campaign
-  - pressery
   - summit-sky-ranch
+  - kokos
+  - pressery
   - revo-jimmy-chin
   - true-north
   - spanish-peaks

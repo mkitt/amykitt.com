@@ -40,7 +40,7 @@ const style = css(
   }),
   select('& img[alt="Amy Kitt"]', {
     width: 120,
-    height: 360,
+    height: 241,
     fontSize: 12,
   }),
   media3(select('& img[alt="Amy Kitt"]', {
@@ -48,7 +48,7 @@ const style = css(
     top: 0,
     left: 0,
     width: 240,
-    height: 720,
+    height: 483,
   })),
   media3(select('#about &', {
     paddingLeft: 260,
