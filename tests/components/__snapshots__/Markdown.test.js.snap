@@ -2,7 +2,7 @@
 
 exports[`Markdown shows the correct snapshot for the Markdown component tree 1`] = `
 <div
-  className="css-dzce0j"
+  className="css-jlylsu"
 >
   <p>
     Hello 
