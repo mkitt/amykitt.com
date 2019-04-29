@@ -11,7 +11,6 @@ const getLinkStyle = ({ isActive }: { isActive?: boolean }) => ({
   borderBottom: `1px solid ${
     isActive === true ? 'currentColor' : 'transparent'
   }`,
-  color: isActive === true ? '#000' : 'currentColor',
   transition: 'color 0.333s',
   '.no-touch &:hover': {
     color: '#000',
