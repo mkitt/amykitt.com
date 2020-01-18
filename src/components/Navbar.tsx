@@ -1,11 +1,11 @@
 import React, { memo, SyntheticEvent } from 'react'
 import Mark from '../assets/Mark'
-import Container from '../elements/Container'
-import Flex from '../elements/Flex'
-import Grid from '../elements/Grid'
-import Link from '../elements/Link'
-import Text from '../elements/Text'
-import View from '../elements/View'
+import Container from './Container'
+import Flex from './Flex'
+import Grid from './Grid'
+import Link from './Link'
+import Text from './Text'
+import View from './View'
 
 const getLinkStyle = ({ isActive }: { isActive?: boolean }) => ({
   borderBottom: `1px solid ${
@@ -18,8 +18,8 @@ const getLinkStyle = ({ isActive }: { isActive?: boolean }) => ({
 })
 
 type PropsType = {
-  handleClickToSection: (e: SyntheticEvent) => void
-  isAboutActive: boolean
+  readonly handleClickToSection: (e: SyntheticEvent) => void
+  readonly isAboutActive: boolean
 }
 
 const Navbar = ({ handleClickToSection, isAboutActive }: PropsType) => (

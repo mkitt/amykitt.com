@@ -5,8 +5,10 @@ tileWidth: 600
 tileHeight: 450
 ---
 
-# Muse Studio 
+# Muse Studio
+
 ### Brand Identity System/Website
+
 ![Muse Studio Identity 1](https://d194i88zucrucp.cloudfront.net/work/MuseStudioIdentity1-lg.jpg)
 ![Muse Studio Identity 2](https://d194i88zucrucp.cloudfront.net/work/MuseStudioIdentity2-lg.jpg)
 ![Muse Studio Identity 3](https://d194i88zucrucp.cloudfront.net/work/MuseStudioIdentity3-lg.jpg)

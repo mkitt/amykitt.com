@@ -6,7 +6,9 @@ tileHeight: 548
 ---
 
 # Summers Corner
+
 ### Root Journal V1
+
 ![Summers Corner Journal 1](https://d194i88zucrucp.cloudfront.net/work/SC_Journal1-lg.jpg)
 ![Summers Corner Journal 2](https://d194i88zucrucp.cloudfront.net/work/SC_Journal2-lg.jpg)
 ![Summers Corner Journal 3](https://d194i88zucrucp.cloudfront.net/work/SC_Journal3-lg.jpg)

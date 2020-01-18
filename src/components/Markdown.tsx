@@ -1,12 +1,12 @@
 import styled from '@emotion/styled/macro'
 import React, { memo } from 'react'
 import ReactMarkdown from 'react-markdown'
-import Heading from '../elements/Heading'
-import Img from '../elements/Img'
-import View from '../elements/View'
+import Heading from './Heading'
+import Img from './Img'
+import View from './View'
 
 type HeadingsPropsType = {
-  level: number
+  readonly level: number
 }
 
 const Root = styled(View)({
@@ -48,9 +48,9 @@ const StyledImg = styled(Img)({
 })
 
 const List = styled('ul')({
+  listStyle: 'none',
   margin: 0,
   padding: 0,
-  listStyle: 'none',
 })
 
 const Link = styled.a({
@@ -76,7 +76,7 @@ const components = {
 }
 
 type PropsType = {
-  source: string
+  readonly source: string
 }
 
 const Markdown = ({ source }: PropsType) => (
