@@ -32,7 +32,7 @@
     "@types/smoothscroll-polyfill": "0.3.1",
     "husky": "4.0.10",
     "jest-emotion": "10.0.27",
-    "lint-staged": "9.5.0",
+    "lint-staged": "10.0.7",
     "prettier": "1.19.1",
     "react-scripts": "3.3.0",
     "typescript": "3.7.5"
