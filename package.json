@@ -12,7 +12,7 @@
     "test": "react-scripts test"
   },
   "dependencies": {
-    "@emotion/core": "10.0.27",
+    "@emotion/core": "10.0.28",
     "@emotion/styled": "10.0.27",
     "front-matter": "3.1.0",
     "intersection-observer": "0.7.0",
