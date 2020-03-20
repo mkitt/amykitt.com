@@ -16,7 +16,7 @@
     "@emotion/styled": "10.0.27",
     "front-matter": "3.1.0",
     "intersection-observer": "0.7.0",
-    "react": "16.12.0",
+    "react": "16.13.1",
     "react-dom": "16.12.0",
     "react-intersection-observer": "8.25.2",
     "react-markdown": "4.3.1",
