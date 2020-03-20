@@ -31,7 +31,7 @@
     "@types/react-modal": "3.10.3",
     "@types/smoothscroll-polyfill": "0.3.1",
     "husky": "4.0.10",
-    "jest-emotion": "10.0.27",
+    "jest-emotion": "10.0.32",
     "lint-staged": "9.5.0",
     "prettier": "1.19.1",
     "react-scripts": "3.3.0",
