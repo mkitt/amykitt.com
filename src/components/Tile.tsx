@@ -1,15 +1,15 @@
-import React, { SyntheticEvent, memo } from 'react'
-import Button from '../elements/Button'
-import Img from '../elements/Img'
+import React, { memo, SyntheticEvent } from 'react'
+import Button from './Button'
+import Img from './Img'
 
 type PropsType = {
-  allowableWidth: number
-  handleClick: (e: SyntheticEvent) => void
-  id: string
-  src: string
-  title: string
-  width: number
-  height: number
+  readonly allowableWidth: number
+  readonly handleClick: (e: SyntheticEvent) => void
+  readonly id: string
+  readonly src: string
+  readonly title: string
+  readonly width: number
+  readonly height: number
 }
 
 const partWhite = 'rgba(255, 255, 255, 0.4)'

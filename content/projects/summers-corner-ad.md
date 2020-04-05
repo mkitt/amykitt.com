@@ -6,7 +6,9 @@ tileHeight: 675
 ---
 
 # Summers Corner
+
 ### Brand Ad
-![Summers Corner Ad](https://d194i88zucrucp.cloudfront.net/work/SC_Sspread-lg.jpg)
 
 Created in partnership with Strada Advertising, Denver CO [stradamade.com](http://www.stradamade.com)
+
+![Summers Corner Ad](https://d194i88zucrucp.cloudfront.net/work/SC_Sspread-lg.jpg)

@@ -6,7 +6,9 @@ tileHeight: 450
 ---
 
 # Instagram
+
 ### Identity & Printed Matter for NYC event
+
 ![Instagram NYC Folio 1](https://d194i88zucrucp.cloudfront.net/work/IG_NYCfolio1-lg.jpg)
 ![Instagram NYC Folio 2](https://d194i88zucrucp.cloudfront.net/work/IG_NYCfolio2-lg.jpg)
 ![Instagram NYC Invite 1](https://d194i88zucrucp.cloudfront.net/work/IG_NYCinvite1-lg.jpg)

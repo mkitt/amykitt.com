@@ -1,34 +1,35 @@
 import React, {
   Fragment,
-  SyntheticEvent,
   memo,
+  SyntheticEvent,
   useCallback,
   useRef,
   useState,
 } from 'react'
 import { useInView } from 'react-intersection-observer'
 import X from './assets/X'
-import Markdown from './blocks/Markdown'
-import Modal from './blocks/Modal'
-import Navbar from './blocks/Navbar'
-import Tile from './blocks/Tile'
-import Button from './elements/Button'
-import Container from './elements/Container'
-import Flex from './elements/Flex'
-import Grid from './elements/Grid'
-import View from './elements/View'
-import getTileDimension from './hooks/useTileDimension'
+import Button from './components/Button'
+import Container from './components/Container'
+import Flex from './components/Flex'
+import Grid from './components/Grid'
+import Markdown from './components/Markdown'
+import Modal from './components/Modal'
+import Navbar from './components/Navbar'
+import Tile from './components/Tile'
+import View from './components/View'
+import { about, home, projects } from './data.json'
 import useDetectTouch from './hooks/useDetectTouch'
 import useRowWidth from './hooks/useRowWidth'
 import useScrollToAnchor from './hooks/useScrollToAnchor'
-import { about, home, projects } from './data.json'
+import getTileDimension from './hooks/useTileDimension'
 
 const minHeight = 'calc(100vh - 10rem)'
-const works = home.tiles.map(id =>
-  projects.find(project => project.id.includes(`${id}.md`)),
+const works = home.tiles.map((id) =>
+  projects.find((project) => project.id.includes(`${id}.md`)),
 )
 
 type WorksType = Required<typeof works>
+type ProjectType = typeof projects[0] | undefined
 
 const Paddle = ({ ...props }) => (
   <Button
@@ -46,19 +47,19 @@ const Paddle = ({ ...props }) => (
 
 const App = () => {
   const [aboutRef, isAboutActive] = useInView({ threshold: 0.75 })
-  const [project, setProject] = useState()
+  const [project, setProject] = useState<ProjectType>()
   const rowRef = useRef(null)
   const rowWidth = useRowWidth(rowRef)
   const scrollToAnchor = useScrollToAnchor()
   useDetectTouch()
 
   const handleClickProject = useCallback((e: SyntheticEvent) => {
-    const stuff = projects.find(project => project.id === e.currentTarget.id)
+    const stuff = projects.find((project) => project.id === e.currentTarget.id)
     setProject(stuff)
   }, [])
 
   const handleCloseProject = useCallback(() => {
-    setProject(null)
+    setProject(undefined)
   }, [])
 
   const handleNextProject = useCallback(
@@ -100,7 +101,7 @@ const App = () => {
               gridTemplateColumns: 'repeat(auto-fill, minmax(15rem, 1fr))',
             }}
           >
-            {(works as WorksType).map(work => {
+            {(works as WorksType).map((work) => {
               const { width, height } = getTileDimension({
                 allowableWidth: rowWidth,
                 naturalWidth: work.tileWidth,

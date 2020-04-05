@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import App from './App'
 
 async function loadPolyfills() {
-  // @ts-ignore
   if (typeof window.IntersectionObserver === 'undefined') {
     await import('intersection-observer')
   }

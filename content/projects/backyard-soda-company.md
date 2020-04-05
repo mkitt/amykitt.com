@@ -6,5 +6,7 @@ tileHeight: 975
 ---
 
 # Backyard Soda Company
+
 ### Brand Identity/Packaging
+
 ![Backyard Syrup Trio](https://d194i88zucrucp.cloudfront.net/work/BackyardSoda_SyrupTrio-lg.jpg)
