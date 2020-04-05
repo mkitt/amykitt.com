@@ -1,19 +1,26 @@
 ---
 title: Home
 tiles:
-  - camp-hale
-  - ranch-resort-realty
+  - bighorn
+  - dtr-the-ranches
+  - bristlecone
+  - backyard-soda-company-cbd
+  - duet-identity
   - instagram-printed-matter
-  - backyard-soda-company
+  - true-blue-syrup
   - audi-r8
+  - camp-hale
+  - brewin-burro
+  - backyard-soda-company
+  - golfholics-identity
   - summers-corner-journal
   - instagram-badges
-  - laurus
+  - factory-brand-book-v10
   - instagram-nyc
   - factory-identity
   - corner-house-cafe
   - fling
-  - factory-brand-book-v10
+  - laurus
   - summers-corner-grand-opening
   - happybunny
   - factory-brand-book-v11
@@ -36,6 +43,7 @@ tiles:
   - elyson
   - obrien
   - revo-press-kit
+  - ranch-resort-realty
   - innofin
   - revo-brochure
   - audi-printed-matter

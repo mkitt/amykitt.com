@@ -24,11 +24,12 @@ import useScrollToAnchor from './hooks/useScrollToAnchor'
 import getTileDimension from './hooks/useTileDimension'
 
 const minHeight = 'calc(100vh - 10rem)'
-const works = home.tiles.map(id =>
-  projects.find(project => project.id.includes(`${id}.md`)),
+const works = home.tiles.map((id) =>
+  projects.find((project) => project.id.includes(`${id}.md`)),
 )
 
 type WorksType = Required<typeof works>
+type ProjectType = typeof projects[0] | undefined
 
 const Paddle = ({ ...props }) => (
   <Button
@@ -46,19 +47,19 @@ const Paddle = ({ ...props }) => (
 
 const App = () => {
   const [aboutRef, isAboutActive] = useInView({ threshold: 0.75 })
-  const [project, setProject] = useState()
+  const [project, setProject] = useState<ProjectType>()
   const rowRef = useRef(null)
   const rowWidth = useRowWidth(rowRef)
   const scrollToAnchor = useScrollToAnchor()
   useDetectTouch()
 
   const handleClickProject = useCallback((e: SyntheticEvent) => {
-    const stuff = projects.find(project => project.id === e.currentTarget.id)
+    const stuff = projects.find((project) => project.id === e.currentTarget.id)
     setProject(stuff)
   }, [])
 
   const handleCloseProject = useCallback(() => {
-    setProject(null)
+    setProject(undefined)
   }, [])
 
   const handleNextProject = useCallback(
@@ -100,7 +101,7 @@ const App = () => {
               gridTemplateColumns: 'repeat(auto-fill, minmax(15rem, 1fr))',
             }}
           >
-            {(works as WorksType).map(work => {
+            {(works as WorksType).map((work) => {
               const { width, height } = getTileDimension({
                 allowableWidth: rowWidth,
                 naturalWidth: work.tileWidth,
