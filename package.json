@@ -19,7 +19,7 @@
   "devDependencies": {
     "@types/jest": "25.2.1",
     "@types/node": "13.11.0",
-    "@types/react": "16.9.32",
+    "@types/react": "16.9.34",
     "@types/react-dom": "16.9.6",
     "@types/react-modal": "3.10.5",
     "@types/smoothscroll-polyfill": "0.3.1",
