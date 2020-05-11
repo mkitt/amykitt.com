@@ -34,9 +34,9 @@
   "scripts": {
     "build": "react-scripts build",
     "chex": "yarn tsc && yarn lint && CI=1 yarn test",
-    "deploy": "netlify deploy --prod --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID --dir build",
+    "deploy": "netlify deploy --prod --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID --dir build --message \"Deployed $(git rev-parse --short HEAD)\"",
     "deploy:manual": "set -a; . ./.env.local; set +a && yarn deploy",
-    "lint": "make lint",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-pattern react-app-env.d.ts src/",
     "prebuild": "node ./prebuild.js",
     "start": "react-scripts start",
     "test": "react-scripts test"
