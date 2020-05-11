@@ -15,6 +15,8 @@ lint:
 deploy:
 	yarn netlify deploy \
 		--prod \
-		--dir=${PWD}/build \
-		--message="Deployed $(shell git rev-parse --short HEAD)"
+		--auth ${NETLIFY_AUTH_TOKEN} \
+		--site ${NETLIFY_SITE_ID} \
+		--dir ${PWD}/build \
+		--message "Deployed $(shell git rev-parse --short HEAD)"
 .PHONY: deploy
