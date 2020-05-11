@@ -25,15 +25,18 @@
     "@types/smoothscroll-polyfill": "0.3.1",
     "husky": "4.2.5",
     "jest-emotion": "10.0.32",
-    "prettier": "2.0.5",
     "lint-staged": "10.1.7",
+    "netlify-cli": "2.50.0",
+    "prettier": "2.0.5",
     "react-scripts": "3.4.1",
     "typescript": "3.8.3"
   },
   "scripts": {
     "build": "react-scripts build",
     "chex": "yarn tsc && yarn lint && CI=1 yarn test",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-pattern react-app-env.d.ts src/",
+    "deploy": "make deploy",
+    "deploy:manual": "set -a; . ./.env.local; set +a && yarn deploy",
+    "lint": "make lint",
     "prebuild": "node ./prebuild.js",
     "start": "react-scripts start",
     "test": "react-scripts test"
