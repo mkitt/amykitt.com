@@ -7,7 +7,7 @@
   "dependencies": {
     "@emotion/core": "10.0.28",
     "@emotion/styled": "10.0.27",
-    "front-matter": "3.1.0",
+    "front-matter": "4.0.2",
     "intersection-observer": "0.10.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
