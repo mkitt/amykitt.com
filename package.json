@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
-    "@emotion/core": "10.0.28",
+    "@emotion/core": "10.0.35",
     "@emotion/styled": "10.0.27",
     "front-matter": "4.0.2",
     "intersection-observer": "0.11.0",
