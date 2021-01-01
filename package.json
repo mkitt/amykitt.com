@@ -26,7 +26,7 @@
     "husky": "4.2.5",
     "jest-emotion": "10.0.32",
     "lint-staged": "10.2.11",
-    "netlify-cli": "2.58.0",
+    "netlify-cli": "2.69.11",
     "prettier": "2.0.5",
     "react-scripts": "3.4.1",
     "typescript": "3.9.7"
