@@ -23,7 +23,7 @@
     "@types/react-dom": "16.9.8",
     "@types/react-modal": "3.10.6",
     "@types/smoothscroll-polyfill": "0.3.1",
-    "husky": "4.2.5",
+    "husky": "5.1.2",
     "jest-emotion": "10.0.32",
     "lint-staged": "10.2.11",
     "netlify-cli": "2.58.0",
