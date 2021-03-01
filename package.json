@@ -21,7 +21,7 @@
     "@types/node": "14.0.23",
     "@types/react": "16.9.43",
     "@types/react-dom": "16.9.8",
-    "@types/react-modal": "3.10.6",
+    "@types/react-modal": "3.12.0",
     "@types/smoothscroll-polyfill": "0.3.1",
     "husky": "4.2.5",
     "jest-emotion": "10.0.32",
