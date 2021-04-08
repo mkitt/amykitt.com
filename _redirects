@@ -1,4 +1,0 @@
-# Optional: Redirect default Netlify subdomain to primary domain
-https://amykitt.netlify.com/* https://amykitt.com/:splat 301!
-
-/*    /index.html   200
