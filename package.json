@@ -24,9 +24,9 @@
     "@types/react-dom": "17.0.3",
     "@types/react-modal": "3.12.0",
     "@types/smoothscroll-polyfill": "0.3.1",
+    "gh-pages": "3.1.0",
     "husky": "6.0.0",
     "lint-staged": "10.5.4",
-    "netlify-cli": "3.16.0",
     "prettier": "2.2.1",
     "react-scripts": "4.0.3",
     "typescript": "4.2.4"
@@ -34,10 +34,9 @@
   "scripts": {
     "build": "react-scripts build",
     "chex": "yarn tsc && yarn lint && CI=1 yarn test",
-    "deploy": "netlify deploy --prod --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID --dir build --message \"Deployed $(git rev-parse --short HEAD)\"",
-    "deploy:manual": "set -a; . ./.env.local; set +a && yarn deploy",
+    "deploy": "gh-pages --branch site --dist build --dotfiles",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-pattern react-app-env.d.ts src/",
-    "prebuild": "node ./prebuild.js",
+    "prebuild": "node ./prebuild.js && prettier --write ./src/data.json",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
