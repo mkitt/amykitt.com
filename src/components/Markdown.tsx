@@ -1,5 +1,5 @@
 import styled from '@emotion/styled/macro'
-import React, { memo } from 'react'
+import { memo } from 'react'
 import ReactMarkdown from 'react-markdown'
 import Heading from './Heading'
 import Img from './Img'

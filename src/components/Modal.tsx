@@ -1,5 +1,5 @@
-import { ClassNames, CSSObject } from '@emotion/core'
-import React, { useCallback, useEffect } from 'react'
+import { ClassNames, CSSObject } from '@emotion/react'
+import { useCallback, useEffect } from 'react'
 import ReactModal, { setAppElement } from 'react-modal'
 
 type PropsType = {

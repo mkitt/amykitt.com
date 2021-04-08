@@ -1,4 +1,4 @@
-import React, { memo, SyntheticEvent } from 'react'
+import { memo, SyntheticEvent } from 'react'
 import Button from './Button'
 import Img from './Img'
 

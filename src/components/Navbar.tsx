@@ -1,4 +1,4 @@
-import React, { memo, SyntheticEvent } from 'react'
+import { memo, SyntheticEvent } from 'react'
 import Mark from '../assets/Mark'
 import Container from './Container'
 import Flex from './Flex'

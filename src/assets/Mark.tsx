@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import { memo } from 'react'
 
 const Mark = () => (
   <svg width={43} height={47} viewBox="0 0 73 80">
