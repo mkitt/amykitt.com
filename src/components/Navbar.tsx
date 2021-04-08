@@ -70,7 +70,7 @@ const Navbar = ({ handleClickToSection, isAboutActive }: PropsType) => (
           <strong>Hi. </strong>
           <span>
             If you like what you see below perhaps we can work together in the
-            future...
+            future.
           </span>
         </Text>
         <Flex
