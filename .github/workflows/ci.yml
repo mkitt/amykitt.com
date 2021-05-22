@@ -23,7 +23,3 @@ jobs:
             ${{ runner.os }}-yarn-
       - run: yarn install --frozen-lockfile
       - run: yarn tsc
-      - run: yarn lint
-      - run: yarn test
-        env:
-          CI: '1'

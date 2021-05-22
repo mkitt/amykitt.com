@@ -1,0 +1,21 @@
+/* https://google-webfonts-helper.herokuapp.com/fonts/montserrat?subsets=latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat'),
+    url('/fonts/montserrat-v15-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Montserrat'),
+    url('/fonts/montserrat-v15-latin-700.woff2') format('woff2');
+}
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
