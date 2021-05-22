@@ -3,7 +3,11 @@
 *.local
 *.log
 *.map
+*.next
 .DS_Store
-build
+.next
+.vim
 coverage
 node_modules
+out
+report.*
