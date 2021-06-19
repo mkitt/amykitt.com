@@ -32,5 +32,7 @@ const NextLink = React.forwardRef((props: NextLinkType, ref: any) => {
   )
 })
 
+NextLink.displayName = 'NextLink'
+
 export type { NextLinkType }
 export default NextLink

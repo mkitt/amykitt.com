@@ -9,6 +9,7 @@ type PropsType = {
 function WorkImage(props: PropsType) {
   const { alt, className, src, width = 1540, height = 1155 } = props
   return (
+    // eslint-disable-next-line @next/next/no-img-element
     <img
       alt={alt}
       className={className}

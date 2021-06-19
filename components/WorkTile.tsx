@@ -35,6 +35,7 @@ function WorkTile(props: WorkTileType) {
       href={`/work/${slug}`}
       title={label}
     >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         alt={slug}
         src={`/assets/work/${tile}`}

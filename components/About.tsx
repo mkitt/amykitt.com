@@ -31,8 +31,9 @@ function About() {
         </p>
       </div>
       <div className="min-w-30 min-h-60 mb-1 md:order-1 md:min-w-60 md:min-h-120">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          alt="Amy Kitt Photo"
+          alt="Amy Kitt"
           src="/assets/amy-kitt-dual.jpg"
           width={512}
           height={1030}
