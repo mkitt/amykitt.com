@@ -5,6 +5,7 @@ const partWhite = 'rgba(255, 255, 255, 0.4)'
 const zeroWhite = 'rgba(255, 255, 255, 0)'
 
 module.exports = {
+  mode: 'jit',
   purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'media',
   theme: {
